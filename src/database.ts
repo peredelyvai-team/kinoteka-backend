@@ -9,7 +9,9 @@ export const connect = () => {
     const password = process.env.MONGO_DB_PASSWORD
     const login = process.env.MONGO_DB_LOGIN
     const mdb_name = process.env.MONGO_DB_NAME
-    const uri: string = `mongodb+srv://${login}:${password}@kinoteka-cluster.ayank.mongodb.net/${mdb_name}?retryWrites=true&w=majority`
+    const clusterName = process.env.MONGO_CLUSTER_NAME
+    const clusterPrefix = process.env.MONGO_CLUSTER_PREFIX
+    const uri: string = `mongodb+srv://${login}:${password}@${clusterName}.${clusterPrefix}.mongodb.net/${mdb_name}?retryWrites=true&w=majority`
     console.log(uri)
     mongoose.connect(uri, {
         useFindAndModify: true,

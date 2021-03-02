@@ -79,6 +79,7 @@ userRouter.get(PATH.user, authenticationCheck, async (req: Request, res: Respons
 		const login = req.query.login?.toString() || ''
 		const user_id = req.query.user_id?.toString() || ''
 
+		console.log(process.env.NODE_ENV)
 		console.log(`login: ${login}`)
 		console.log(`user_id: ${user_id}`)
 		if (login) {

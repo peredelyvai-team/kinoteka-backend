@@ -4,11 +4,12 @@ const mongoose_1 = require("mongoose");
 const users_statics_1 = require("db.users/users.statics");
 const users_methods_1 = require("db.users/users.methods");
 const UserSchema = new mongoose_1.Schema({
-    id: String,
+    user_id: String,
     login: String,
     password: String,
     viewed_ids: Array,
-    to_watch_ids: Array
+    to_watch_ids: Array,
+    friends: Array
 });
 // @ts-ignore
 UserSchema.statics.findUserById = users_statics_1.findUserById;

@@ -1,7 +1,6 @@
 import express, { Request, Response } from 'express'
 import { userRouter } from "./routes/user"
 import { authRouter } from './routes/authorization'
-import { PATH } from "~/utils/constants"
 import { connect } from "~/database"
 import LogRocket from 'logrocket'
 import * as fs from "fs"

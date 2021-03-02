@@ -1,24 +1,4 @@
 "use strict";
-// const express = require('express');
-// const path = require('path');
-// const cookieParser = require('cookie-parser');
-// const logger = require('morgan');
-//
-// const indexRouter = require('./routes/index');
-// const usersRouter = require('./routes/users');
-//
-// const app = express();
-//
-// app.use(logger('dev'));
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
-// app.use(express.static(path.join(__dirname, 'public')));
-//
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-//
-// module.exports = app;
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -44,10 +24,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const user_1 = require("./routes/user");
-const constants_1 = require("~/utils/constants");
+const authorization_1 = require("./routes/authorization");
 const database_1 = require("~/database");
 const logrocket_1 = __importDefault(require("logrocket"));
 const fs = __importStar(require("fs"));
+const cookieParser = require('cookie-parser');
 require('dotenv').config();
 const path = require("path");
 const logger = require('morgan');
@@ -57,11 +38,18 @@ const app = express_1.default();
 const PORT = process.env.PORT;
 const logStream = fs.createWriteStream(path.join(__dirname, 'access.log'));
 app.use(logger('combined', { stream: logStream }));
-app.get('/', (req, res) => {
-    res.send('express app');
+app.use(express_1.default.json());
+app.use(express_1.default.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express_1.default.static(path.join(__dirname, 'public')));
+app.use(user_1.userRouter);
+app.use(authorization_1.authRouter);
+app.get('/a', (req, res) => {
+    res.cookie('sameSite', 'none');
+    res.send('hello');
 });
 database_1.connect();
 app.listen(PORT, () => {
     console.log('server running..');
 });
-app.use(constants_1.PATH.user, user_1.userRouter);
+module.exports = app;

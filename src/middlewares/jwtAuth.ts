@@ -9,9 +9,10 @@ export function authenticationCheck (req: Request, res: Response, next: any) {
       if (err) {
         console.log(err)
         return res.sendStatus(403)
+      } else {
+        console.log(user)
+        next()
       }
-      console.log(user)
-      next()
     })
   } else {
     return res.status(403).send(MESSAGES.BAD_AUTH_PARAMETERS)
