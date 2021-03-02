@@ -1,9 +1,9 @@
 {
-  "name": "untitled",
-  "version": "0.0.0",
+  "name": "kinoteka",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "server": "ts-node -r tsconfig-paths/register\" ./src/app.ts\n",
+    "server": "ts-node -r tsconfig-paths/register ./src/app.ts",
     "server:dev": "nodemon --exec \"ts-node -r tsconfig-paths/register\" ./src/app.ts\n",
     "build": "tsc --project ./",
     "deploy": "git push heroku main",
