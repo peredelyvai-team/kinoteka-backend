@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "server": "nodemon --exec \"ts-node -r tsconfig-paths/register\" ./src/app.ts\n",
+    "server": "ts-node -r tsconfig-paths/register\" ./src/app.ts\n",
+    "server:dev": "nodemon --exec \"ts-node -r tsconfig-paths/register\" ./src/app.ts\n",
     "build": "tsc --project ./",
     "deploy": "git push heroku main",
     "local": "heroku local web",
