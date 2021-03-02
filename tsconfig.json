@@ -2,9 +2,29 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "rootDir": "./",
+    "rootDir": ".",
     "outDir": "./build",
     "esModuleInterop": true,
-    "strict": true
+    "moduleResolution": "node",
+    "strict": true,
+    "baseUrl": ".",
+    "rootDirs": [
+      "."
+    ],
+    "paths": {
+      "*": [
+        "*"
+      ],
+      "interfaces/*": [ "./src/interfaces/*" ],
+      "models/*": [ "./src/models/*" ],
+      "types/*": [ "./src/types/*" ],
+      "utils/*": [ "./src/utils/*" ],
+      "~/*": [
+        "./src/*"
+      ],
+      "db.users/*": [
+        "./src/database/users/*"
+      ]
+    }
   }
 }
