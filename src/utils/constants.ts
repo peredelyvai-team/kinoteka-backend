@@ -1,7 +1,9 @@
 export const PATH = {
+    register: '/register',
+    login: '/login',
+    logout: '/logout',
     user: '/api/user',
     auth: '/authorize',
-    login: '/login',
     token: '/token'
 }
 

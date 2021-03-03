@@ -16,7 +16,8 @@ export interface IUserDocument extends IUser, Document {
 
 export interface IUserCondition {
     user_id?: string,
-    login?: string
+    login?: string,
+    password?: string
 }
 
 export interface IUserModel extends Model<IUserDocument> {

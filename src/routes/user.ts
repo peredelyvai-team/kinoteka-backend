@@ -5,6 +5,7 @@ import {UserModel} from "db.users/users.model"
 import {IUser, IUserCondition} from "db.users/users.types"
 import {MESSAGES} from "utils/messages";
 import {authenticationCheck} from "~/middlewares/jwtAuth";
+const bcrypt = require('bcrypt')
 const userRouter = express.Router()
 
 
@@ -14,11 +15,20 @@ async function findExistUser (login: string): Promise<boolean> {
 	return users !== null
 }
 
+async function cryptPassword (password: string) {
+	const salt = await bcrypt.genSalt(10)
+	return bcrypt.hash(password, salt)
+}
+
+export async function comparePassword (password: string, hash: string) {
+	return bcrypt.compare(password, hash)
+}
+
 async function createUser (login: string, password: string, res: Response): Promise<Response> {
 	const user: IUser = {
 		user_id: uuid(),
 		login,
-		password,
+		password: await cryptPassword(password),
 		viewed_ids: [],
 		to_watch_ids: [],
 		friends: []
@@ -28,7 +38,10 @@ async function createUser (login: string, password: string, res: Response): Prom
 
 	await UserModel.create(user)
 	console.log(`User created: ${user.login}`)
-	return res.status(200).send(user)
+	return res.status(200).send({
+		login: user.login,
+		user_id: user.user_id
+	})
 }
 
 export async function findUserByCondition (condition: IUserCondition) {
@@ -39,7 +52,8 @@ export async function findUserByCondition (condition: IUserCondition) {
 			user_id: user.user_id,
 			viewed_ids: user.viewed_ids,
 			to_watch_ids: user.to_watch_ids,
-			friends: user.friends
+			friends: user.friends,
+			password: user.password
 		}
 	} else {
 		return null
@@ -54,7 +68,7 @@ function validateUserAndSend (user: IUser | null, res: Response) {
 	}
 }
 
-userRouter.post(PATH.user, async (req: Request, res: Response) => {
+userRouter.post(PATH.register, async (req: Request, res: Response) => {
     try {
 			const { login, password } = req.body
 

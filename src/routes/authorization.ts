@@ -3,21 +3,26 @@ import { PATH } from "~/utils/constants"
 import {MESSAGES} from "utils/messages";
 import {errorHandler} from "utils/helpers";
 import {AuthType} from "~/types";
-import {findUserByCondition} from "~/routes/user";
+import {comparePassword, findUserByCondition} from "~/routes/user";
 import {TokenModel} from "~/database/tokens/tokens.model";
+import {IUser} from "db.users/users.types";
 const jwt = require('jsonwebtoken')
 const authRouter = express.Router()
 
 async function loginUser ({ login, password }: AuthType, res: Response) {
-  const user = findUserByCondition({ login })
 
-  if (user) {
-    const accessToken = jwt.sign({ login }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '20m' })
+  const user = await findUserByCondition({ login })
+  console.log(user)
+  const encryptedPassword = user?.password as string
+  if (user && await comparePassword(password, encryptedPassword)) {
+    const accessToken = jwt.sign({ login }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '60m' })
     const refreshToken = jwt.sign({ login }, process.env.REFRESH_TOKEN_SECRET)
 
     await TokenModel.create({ token: refreshToken })
 
     res.json({ accessToken, refreshToken })
+  } else {
+    res.status(403).send(MESSAGES.BAD_AUTH_PARAMETERS)
   }
 }
 
@@ -28,7 +33,7 @@ authRouter.post(PATH.login, async (req: Request, res: Response) => {
     if (login && password) {
       await loginUser({ login, password }, res)
     } else {
-      res.status(403).send(MESSAGES.BAD_AUTH_PARAMETERS)
+      return res.status(403).send(MESSAGES.BAD_AUTH_PARAMETERS)
     }
   } catch (error) {
     errorHandler(error, res)
