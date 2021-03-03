@@ -7,8 +7,8 @@
     "npm": "6.x"
   },
   "scripts": {
-    "server": "node build/src/app.js",
-    "server:dev": "nodemon --exec \"ts-node -r tsconfig-paths/register\" ./src/app.ts\n",
+    "server": "node -r ts-node/register/transpile-only -r tsconfig-paths/register build/src/app.js",
+    "server:dev": "nodemon --exec \"ts-node -r tsconfig-paths/register\" ./src/app.ts",
     "build": "tsc --project ./",
     "deploy": "git push heroku main",
     "local": "heroku local web",
