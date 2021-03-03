@@ -8,7 +8,6 @@
   },
   "scripts": {
     "server": "node build/src/app.js",
-    "postbuild": "ef-tspm",
     "server:dev": "nodemon --exec \"ts-node -r tsconfig-paths/register\" ./src/app.ts\n",
     "build": "tsc --project ./",
     "deploy": "git push heroku main",
