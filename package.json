@@ -7,7 +7,7 @@
     "npm": "6.x"
   },
   "scripts": {
-    "server": "ts-node -r tsconfig-paths/register ./src/app.ts",
+    "server": "ts-node ./src/app.ts",
     "server:dev": "nodemon --exec \"ts-node -r tsconfig-paths/register\" ./src/app.ts\n",
     "build": "tsc --project ./",
     "deploy": "git push heroku main",
@@ -28,7 +28,9 @@
     "mongoose": "^5.11.16",
     "morgan": "~1.9.1",
     "tsconfig-paths": "^3.9.0",
-    "uuid-random": "^1.3.2"
+    "uuid-random": "^1.3.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
   },
   "devDependencies": {
     "@types/chai": "^4.2.15",
@@ -38,8 +40,6 @@
     "chai": "^4.3.0",
     "mocha": "^8.3.0",
     "nodemon": "^2.0.7",
-    "supertest": "^6.1.3",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.2"
+    "supertest": "^6.1.3"
   }
 }
