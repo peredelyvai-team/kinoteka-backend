@@ -6,9 +6,18 @@ export enum HTTP_METHOD {
 }
 
 export enum TMDB_SERVICE {
-	movie = "movie"
+	movie = "movie",
+	videos = "videos"
 }
 
 export enum TMDB_FILM_TYPE {
 	popular = 'popular'
+}
+
+export enum VIDEO_TYPE {
+	trailer = "Trailer"
+}
+
+export enum VIDEO_PROVIDER {
+	youtube = 'YouTube'
 }

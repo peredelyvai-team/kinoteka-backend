@@ -8,8 +8,9 @@ export const PATH = {
 
   films: {
     popular: '/films/popular',
-    last: '/films/popular',
-    recommended: '/films/recommended'
+    latest: '/films/latest',
+    recommended: '/films/recommended',
+	  selected: '/films/:id'
   }
 }
 

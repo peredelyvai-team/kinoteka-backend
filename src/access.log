@@ -1,3 +1,0 @@
-[0mGET /films/popular?page=2 [32m200 [0m629.905 ms - 9388[0m
-[0mGET /films/popular?page=sdf [31m500 [0m447.315 ms - 1082[0m
-[0mGET /films/popular?page=3 [32m200 [0m472.657 ms - 10025[0m

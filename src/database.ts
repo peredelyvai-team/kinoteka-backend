@@ -27,6 +27,9 @@ export const connect = () => {
     database.on("error", (error) => {
         console.log(error)
         console.log("Database error")
+	      setTimeout(() => {
+	      	connect()
+	      }, 5000)
     })
 }
 
