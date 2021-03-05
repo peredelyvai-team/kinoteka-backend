@@ -1,12 +1,17 @@
 import { Document, Model } from "mongoose"
 
 export interface IUser {
-    user_id: string
-    login: string
-    password?: string
-    viewed_ids?: string[]
-    to_watch_ids?: string[]
-    friends?: string[]
+  user_id: string
+  login: string
+  password?: string
+  viewed_ids?: number[]
+  to_watch_ids?: number[]
+  friends?: string[]
+}
+
+export interface IUserFilms {
+	viewedFilms: number[],
+	toWatchIds: number[]
 }
 
 export interface IUserDocument extends IUser, Document {

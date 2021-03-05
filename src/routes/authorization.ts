@@ -5,7 +5,6 @@ import {errorHandler} from "utils/helpers";
 import {AuthType} from "~/types";
 import {comparePassword, findUserByCondition} from "~/routes/user";
 import {TokenModel} from "~/database/tokens/tokens.model";
-import {IUser} from "db.users/users.types";
 const jwt = require('jsonwebtoken')
 const authRouter = express.Router()
 

@@ -1,6 +1,4 @@
 import express, { Request, Response } from 'express'
-import { userRouter } from "./routes/user"
-import { authRouter } from './routes/authorization'
 import { connect } from "~/database"
 import LogRocket from 'logrocket'
 import * as fs from "fs"
@@ -16,14 +14,19 @@ const app = express()
 const PORT = process.env.PORT
 
 const logStream = fs.createWriteStream(path.join(__dirname, 'access.log'))
-app.use(logger('combined', { stream: logStream }))
+app.use(logger('dev', { stream: logStream }))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+import { userRouter } from "./routes/user"
+import { authRouter } from './routes/authorization'
+import { filmsRouter } from './routes/films'
+
 app.use(userRouter)
 app.use(authRouter)
+app.use(filmsRouter)
 
 app.get('/a', (req: Request, res: Response) => {
 	res.cookie('sameSite', 'none')

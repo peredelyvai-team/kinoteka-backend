@@ -34,8 +34,6 @@ async function createUser (login: string, password: string, res: Response): Prom
 		friends: []
 	}
 
-	console.log(user)
-
 	await UserModel.create(user)
 	console.log(`User created: ${user.login}`)
 	return res.status(200).send({

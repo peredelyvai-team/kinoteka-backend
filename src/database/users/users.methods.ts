@@ -1,7 +1,7 @@
 import {IUserDocument} from "db.users/users.types"
 import {FIELDS, MODELS} from "~/utils/constants";
 
-export async function setUsersViewedFilms (this: IUserDocument, viewed_ids: string[]): Promise<IUserDocument | null> {
+export async function setUsersViewedFilms (this: IUserDocument, viewed_ids: number[]): Promise<IUserDocument | null> {
     try {
         this.viewed_ids = viewed_ids
         return this.save()
@@ -11,7 +11,7 @@ export async function setUsersViewedFilms (this: IUserDocument, viewed_ids: stri
     }
 }
 
-export async function getUsersViewedFilms (this: IUserDocument, user_id: string): Promise<string[] | null> {
+export async function getUsersViewedFilms (this: IUserDocument, user_id: string): Promise<number[] | null> {
     try {
         const user = this.model(MODELS.user).findOne({ user_id })
         if (user) {

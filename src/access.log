@@ -1,4 +1,3 @@
-::ffff:127.0.0.1 - - [03/Mar/2021:11:52:58 +0000] "POST /register HTTP/1.1" 400 42 "-" "PostmanRuntime/7.26.8"
-::1 - - [03/Mar/2021:11:53:16 +0000] "POST /register HTTP/1.1" 200 72 "-" "PostmanRuntime/7.26.8"
-::1 - - [03/Mar/2021:11:54:49 +0000] "POST /login HTTP/1.1" 200 328 "-" "PostmanRuntime/7.26.8"
-::1 - - [03/Mar/2021:11:54:51 +0000] "POST /login HTTP/1.1" 403 19 "-" "PostmanRuntime/7.26.8"
+[0mGET /films/popular?page=2 [32m200 [0m629.905 ms - 9388[0m
+[0mGET /films/popular?page=sdf [31m500 [0m447.315 ms - 1082[0m
+[0mGET /films/popular?page=3 [32m200 [0m472.657 ms - 10025[0m
