@@ -2,10 +2,16 @@ export const PATH = {
   register: '/register',
   login: '/login',
   logout: '/logout',
-  user: '/api/user',
   auth: '/authorize',
   token: '/token',
-
+	
+	users: {
+  	films: {
+  		viewed: '/users/films/viewed',
+		  to_watch: '/users/films/to_watch'
+	  }
+	},
+	
   films: {
     popular: '/films/popular',
     latest: '/films/latest',

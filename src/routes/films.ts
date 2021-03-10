@@ -5,36 +5,10 @@ import {UserModel} from "db.users/users.model"
 import {IUser, IUserCondition, IUserFilms} from "db.users/users.types"
 import {MESSAGES} from "utils/messages";
 import {authenticationCheck} from "~/middlewares/jwtAuth";
-import {errorHandler, getTokenFromRequest} from "utils/helpers";
+import {errorHandler, getCurrentUser, getTokenFromRequest} from "utils/helpers";
 import {getFilmTrailer, getPopularFilms, getSelectedFilm} from "utils/tmdbApi";
 import {IFilm, IFilmData, IFilmMinimize, ITMDBResponse, ITMDBResponseData} from "interfaces/ITMDB";
 const filmsRouter = express.Router()
-const jwt = require('jsonwebtoken')
-
-function getCurrentUser (req: Request) {
-	return new Promise ((resolve, reject) => {
-		try {
-			const token = getTokenFromRequest(req)
-			if (token) {
-				jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err: any, { login }: any) => {
-					if (err) {
-						console.log(err)
-						reject(err)
-					} else {
-						console.log(login)
-						const user = UserModel.findOne({ login })
-						console.log(user)
-						resolve(user)
-					}
-				})
-			} else {
-				reject()
-			}
-		} catch (error) {
-			reject(error)
-		}
-	})
-}
 
 function getPosterPath (poster_path: string): string {
 	return `${process.env.TMBD_COVER_URL}${poster_path}`
