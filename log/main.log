@@ -1,0 +1,7 @@
+[2021-03-16T18:47:12.332] [DEBUG] [D:\Универ\kinoteka-backend\src\app.ts] [line-49]: Start application
+[2021-03-16T18:48:49.255] [DEBUG] [D:\Универ\kinoteka-backend\src\app.ts] [line-49]: Start application
+[2021-03-16T18:50:11.645] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-16T18:52:49.900] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-16T18:52:49.919] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-16T18:53:45.916] [D:\Универ\kinoteka-backend\src\database.ts]	 [INFO]	 [line 23]: Running on environment: test
+[2021-03-16T18:53:45.930] [D:\Универ\kinoteka-backend\src\app.ts]	 [DEBUG]	 [line 49]: Start application

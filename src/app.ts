@@ -1,41 +1,57 @@
 import express, { Request, Response } from 'express'
 import { connect } from "~/database"
-import LogRocket from 'logrocket'
 import * as fs from "fs"
+
+import { userRouter } from "./routes/user"
+import { authRouter } from './routes/authorization'
+import { filmsRouter } from './routes/films'
+import {ENV} from "utils/enums"
+import {log} from "utils/logger";
 
 const cookieParser = require('cookie-parser')
 require('dotenv').config()
 const path = require("path")
 const logger = require('morgan')
-const appId: any = process.env.LOG_ROCKER_APP_ID
-LogRocket.init(appId)
-
 const app = express()
-const PORT = process.env.PORT
 
-const logStream = fs.createWriteStream(path.join(__dirname, 'access.log'))
-app.use(logger('dev', { stream: logStream }))
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+process.env.NODE_ENV = ENV.test
+process.env.DEBUG = "*"
 
-import { userRouter } from "./routes/user"
-import { authRouter } from './routes/authorization'
-import { filmsRouter } from './routes/films'
 
-app.use(userRouter)
-app.use(authRouter)
-app.use(filmsRouter)
+const debug = require("debug")("logger");
+debug("start application")
 
-app.get('/a', (req: Request, res: Response) => {
-	res.cookie('sameSite', 'none')
-	res.send('hello');
-});
+const setAppModules = function () {
+	const logStream = fs.createWriteStream(path.join(__dirname, 'access.log'))
+	app.use(logger('dev', { stream: logStream }))
+	app.use(express.json());
+	app.use(express.urlencoded({ extended: false }));
+	app.use(cookieParser());
+	app.use(express.static(path.join(__dirname, 'public')));
+}
 
-connect()
-app.listen(PORT, () => {
-    console.log('server running..')
-})
+const declareAppRouters = function () {
+	app.use(userRouter)
+	app.use(authRouter)
+	app.use(filmsRouter)
+	
+	app.get('/a', (req: Request, res: Response) => {
+		res.cookie('sameSite', 'none')
+		res.send('hello');
+	});
+}
+
+const startApp = function () {
+	const PORT = process.env.PORT
+	connect()
+	app.listen(PORT, () => {
+		console.log('server running on PORT: ' + PORT)
+		log.debug("Start application")
+	})
+}
+
+setAppModules();
+declareAppRouters();
+startApp();
 
 module.exports = app

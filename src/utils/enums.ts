@@ -21,3 +21,9 @@ export enum VIDEO_TYPE {
 export enum VIDEO_PROVIDER {
 	youtube = 'YouTube'
 }
+
+export enum ENV {
+	test = 'test',
+	production = 'production',
+	development = 'development'
+}
