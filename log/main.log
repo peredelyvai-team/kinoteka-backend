@@ -5,3 +5,658 @@
 [2021-03-16T18:52:49.919] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
 [2021-03-16T18:53:45.916] [D:\Универ\kinoteka-backend\src\database.ts]	 [INFO]	 [line 23]: Running on environment: test
 [2021-03-16T18:53:45.930] [D:\Универ\kinoteka-backend\src\app.ts]	 [DEBUG]	 [line 49]: Start application
+[2021-03-16T18:54:06.540] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-16T18:54:06.556] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-16T18:56:10.861] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-16T18:56:10.876] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-16T18:56:19.534] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-16T18:56:19.552] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-16T18:57:46.971] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-16T18:57:46.986] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-16T18:58:13.025] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-16T18:58:13.043] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T15:59:05.353] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-18T15:59:05.375] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T16:13:32.887] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-18T16:13:32.906] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T16:43:05.267] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-18T16:43:05.281] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T16:44:05.621] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-18T16:44:05.636] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T16:44:35.925] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-18T16:47:51.404] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-18T16:47:51.418] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T16:47:53.009] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-18T16:48:26.092] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-18T16:48:26.107] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T16:48:27.313] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-18T16:48:33.739] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T16:48:33.915] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 0
+}
+[2021-03-18T16:50:00.079] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T16:50:00.196] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 0
+}
+[2021-03-18T16:50:00.198] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 96]: Retrieved user: {
+  viewed_ids: [],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 0
+}
+[2021-03-18T16:50:00.198] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 100]: Changes: [object Object]
+[2021-03-18T16:50:00.199] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 102]: Added ids: 527774,587807,458576
+[2021-03-18T16:50:00.333] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 114]: Viewed films: 527774,587807,458576
+[2021-03-18T16:50:00.470] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 116]: document saved
+[2021-03-18T16:50:45.638] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-18T16:50:45.651] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T16:50:47.245] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-18T16:51:00.505] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T16:51:00.650] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 527774, 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 1
+}
+[2021-03-18T16:51:00.653] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 96]: Retrieved user: {
+  viewed_ids: [ 527774, 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 1
+}
+[2021-03-18T16:51:00.656] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 100]: Changes: [object Object]
+[2021-03-18T16:51:00.657] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 102]: Added ids: 527774,587807,458576
+[2021-03-18T16:51:00.797] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 114]: Viewed films: 527774,587807,458576
+[2021-03-18T16:51:00.911] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 116]: document saved
+[2021-03-18T16:52:07.926] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T16:52:08.085] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 527774, 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 1
+}
+[2021-03-18T16:52:08.087] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 96]: Retrieved user: {
+  viewed_ids: [ 527774, 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 1
+}
+[2021-03-18T16:52:08.088] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 100]: Changes: [object Object]
+[2021-03-18T16:52:08.089] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 102]: Added ids: 
+[2021-03-18T16:52:08.193] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 114]: Viewed films: 587807,458576
+[2021-03-18T16:52:08.313] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 116]: document saved
+[2021-03-18T16:52:58.011] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-18T16:52:58.025] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T16:52:59.610] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-18T16:53:03.152] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T16:53:03.294] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T16:53:03.299] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 96]: Retrieved user: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T16:53:03.300] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 101]: Added ids: 
+[2021-03-18T16:53:03.300] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 102]: Removed ids: 527774
+[2021-03-18T16:53:03.408] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 114]: Viewed films: 587807,458576
+[2021-03-18T16:53:03.522] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 116]: document saved
+[2021-03-18T16:53:14.398] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T16:53:14.522] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T16:53:53.213] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T16:53:53.362] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T16:56:45.235] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T16:56:45.368] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T16:59:57.198] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-18T16:59:57.211] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T16:59:58.817] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-18T17:00:07.937] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T17:00:08.099] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T17:00:08.103] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 69]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T17:00:08.105] [D:\Универ\kinoteka-backend\src\routes\films.ts] [INFO] [line 74]: Attempt to get films: popular
+[2021-03-18T17:00:29.327] [D:\Универ\kinoteka-backend\src\routes\films.ts] [ERROR] [line 99]: Error: connect ETIMEDOUT 13.33.240.129:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '13.33.240.129',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/popular',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-18T17:05:57.838] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T17:05:57.949] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T17:05:57.950] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 69]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T17:05:57.952] [D:\Универ\kinoteka-backend\src\routes\films.ts] [INFO] [line 74]: Attempt to get films: popular
+[2021-03-18T17:06:19.015] [D:\Универ\kinoteka-backend\src\routes\films.ts] [ERROR] [line 99]: Error: connect ETIMEDOUT 13.33.240.129:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '13.33.240.129',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/popular',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-18T23:15:51.419] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-18T23:15:51.522] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T23:15:51.525] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 69]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-18T23:15:51.528] [D:\Универ\kinoteka-backend\src\routes\films.ts] [INFO] [line 74]: Attempt to get films: popular
+[2021-03-18T23:16:12.544] [D:\Универ\kinoteka-backend\src\routes\films.ts] [ERROR] [line 99]: Error: connect ETIMEDOUT 13.33.240.129:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '13.33.240.129',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/popular',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}

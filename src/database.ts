@@ -50,7 +50,7 @@ export const connect = () => {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }, () => {
-        console.log('database connected')
+        log.debug('database connected')
     })
 
     database = mongoose.connection

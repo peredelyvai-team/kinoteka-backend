@@ -1,5 +1,6 @@
 import { Response, Request } from "express"
 import {UserModel} from "db.users/users.model"
+import {log} from "utils/logger";
 const jwt = require('jsonwebtoken')
 
 export function errorHandler (error: string, res: Response, code: number = 500) {
@@ -18,14 +19,14 @@ export function getCurrentUser (req: Request) {
 		try {
 			const token = getTokenFromRequest(req)
 			if (token) {
-				jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err: any, { login }: any) => {
+				jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, async (err: any, { login }: any) => {
 					if (err) {
-						console.log(err)
+						log.error(err)
 						reject(err)
 					} else {
-						console.log(login)
-						const user = UserModel.findOne({ login })
-						console.log(user)
+						log.debug(login)
+						const user = await UserModel.findOne({ login })
+						log.debug(user)
 						resolve(user)
 					}
 				})

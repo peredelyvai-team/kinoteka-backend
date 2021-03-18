@@ -8,6 +8,7 @@ import {authenticationCheck} from "~/middlewares/jwtAuth";
 import {errorHandler, getCurrentUser, getTokenFromRequest} from "utils/helpers";
 import {getFilmTrailer, getPopularFilms, getSelectedFilm} from "utils/tmdbApi";
 import {IFilm, IFilmData, IFilmMinimize, ITMDBResponse, ITMDBResponseData} from "interfaces/ITMDB";
+import {log} from "utils/logger";
 const filmsRouter = express.Router()
 
 function getPosterPath (poster_path: string): string {
@@ -65,19 +66,20 @@ function setFullFilmInfo (id: string, film: IFilm, userFilms: IUserFilms): Promi
 filmsRouter.get(PATH.films.popular, authenticationCheck, async (req: Request, res: Response) => {
 	try {
 		const user = await getCurrentUser(req) as IUser
-		console.log(user)
+		log.debug(user)
 		
 		if (user) {
 			
 			const page: string = req.query.page?.toString() || '1'
+			log.info(MESSAGES.ATTEMPT_GET_FILMS + 'popular')
 			const popularFilms: any = await getPopularFilms({ page: parseInt(page), lang: 'ru-RU' })
 			const data: ITMDBResponseData = popularFilms.data
 			
 			const viewedFilms = user.viewed_ids as number[]
 			const toWatchIds = user.to_watch_ids as number[]
-			console.log({ viewedFilms, toWatchIds })
+			log.debug({ viewedFilms, toWatchIds })
 			const parsedFilms = parseUserFilmsArray(data, { viewedFilms, toWatchIds })
-			console.log(parsedFilms)
+			log.debug(parsedFilms)
 			if (parsedFilms) {
 				return res.json({
 					popularFilms: parsedFilms,
@@ -86,12 +88,15 @@ filmsRouter.get(PATH.films.popular, authenticationCheck, async (req: Request, re
 					totalPages: data.total_pages
 				})
 			} else {
+				log.error(MESSAGES.UNABLE_TO_GET_FILMS);
 				return res.status(500).send(MESSAGES.UNABLE_TO_GET_FILMS)
 			}
 		} else {
+			log.error(MESSAGES.BAD_AUTH_PARAMETERS)
 			return res.status(401)
 		}
 	} catch (error) {
+		log.error(error)
 		errorHandler(error, res)
 	}
 })
