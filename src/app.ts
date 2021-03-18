@@ -14,7 +14,7 @@ const path = require("path")
 const logger = require('morgan')
 const app = express()
 
-process.env.NODE_ENV = ENV.test
+// process.env.NODE_ENV = ENV.test
 process.env.DEBUG = "*"
 
 

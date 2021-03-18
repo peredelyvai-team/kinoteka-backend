@@ -660,3 +660,9 @@
   isAxiosError: true,
   toJSON: [Function: toJSON]
 }
+[2021-03-18T23:19:49.102] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-18T23:19:49.123] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T23:19:50.105] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-18T23:28:48.662] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: undefined
+[2021-03-18T23:28:48.682] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-18T23:28:51.792] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
