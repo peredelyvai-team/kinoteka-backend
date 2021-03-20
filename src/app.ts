@@ -14,8 +14,8 @@ const path = require("path")
 const logger = require('morgan')
 const app = express()
 
-// process.env.NODE_ENV = ENV.test
-process.env.DEBUG = "*"
+process.env.NODE_ENV = process.env.NODE_ENV === ENV.production ? ENV.test : ENV.production
+// process.env.DEBUG = "*"
 
 
 const debug = require("debug")("logger");
