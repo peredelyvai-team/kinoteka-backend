@@ -11,7 +11,7 @@ import {IFilm, IFilmData, IFilmMinimize, ITMDBResponse, ITMDBResponseData} from 
 import {log} from "utils/logger";
 const filmsRouter = express.Router()
 
-function getPosterPath (poster_path: string): string {
+export function getPosterPath (poster_path: string): string {
 	return `${process.env.TMBD_COVER_URL}${poster_path}`
 }
 

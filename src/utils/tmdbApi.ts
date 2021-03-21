@@ -1,8 +1,13 @@
 import {IFilmsParameters} from "interfaces/IFilmsParameters"
-import {HTTP_METHOD, TMDB_FILM_TYPE, TMDB_SERVICE, VIDEO_PROVIDER, VIDEO_TYPE} from "utils/enums";
+import {ENV, HTTP_METHOD, TMDB_FILM_TYPE, TMDB_SERVICE, VIDEO_PROVIDER, VIDEO_TYPE} from "utils/enums";
 import {IFilm, IVideo} from "interfaces/ITMDB";
+import {log} from "utils/logger";
+import {MESSAGES} from "utils/messages";
 
 const axios = require('axios').default
+
+const origin = process.env.NODE_ENV === ENV.production ? process.env.ORIGIN_PRODUCTION : process.env.ORIGIN_TEST
+log.debug(MESSAGES.ORIGIN + origin)
 
 export function getPopularFilms (params: IFilmsParameters) {
 	return new Promise(async (resolve, reject) => {
@@ -10,7 +15,10 @@ export function getPopularFilms (params: IFilmsParameters) {
 			const tmdbURL = `${process.env.TMDB_API_HOST}/${TMDB_SERVICE.movie}/${TMDB_FILM_TYPE.popular}?api_key=${process.env.TMDB_API_KEY}&page=${params.page}&region=RU`
 			const films = await axios({
 				method: HTTP_METHOD.GET,
-				url: tmdbURL
+				url: `${process.env.PROXY_SERVER}/${tmdbURL}`,
+				headers: {
+					Origin: origin
+				}
 			})
 			resolve(films)
 		} catch (error) {
@@ -26,7 +34,10 @@ export function getSelectedFilm (id: string): Promise<IFilm> {
 			const tmdbURL = `${process.env.TMDB_API_HOST}/${TMDB_SERVICE.movie}/${id}?api_key=${process.env.TMDB_API_KEY}&language=ru-RU`
 			const { data } = await axios({
 				method: HTTP_METHOD.GET,
-				url: tmdbURL
+				url: `${process.env.PROXY_SERVER}/${tmdbURL}`,
+				headers: {
+					Origin: origin
+				}
 			})
 			resolve(data)
 		} catch (error) {
@@ -41,7 +52,10 @@ export function getFilmVideos (id: string): Promise<any> {
 			const tmdbURL = `${process.env.TMDB_API_HOST}/${TMDB_SERVICE.movie}/${id}/${TMDB_SERVICE.videos}?api_key=${process.env.TMDB_API_KEY}&language=ru-RU`
 			const { data } = await axios({
 				method: HTTP_METHOD.GET,
-				url: tmdbURL
+				url: `${process.env.PROXY_SERVER}/${tmdbURL}`,
+				headers: {
+					Origin: origin
+				}
 			})
 			resolve(data)
 		} catch (error) {

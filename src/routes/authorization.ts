@@ -14,8 +14,8 @@ async function loginUser ({ login, password }: AuthType, res: Response) {
   console.log(user)
   const encryptedPassword = user?.password as string
   if (user && await comparePassword(password, encryptedPassword)) {
-    const accessToken = jwt.sign({ login }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '60m' })
-    const refreshToken = jwt.sign({ login }, process.env.REFRESH_TOKEN_SECRET)
+    const accessToken = jwt.sign({ login, userId: user.user_id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '60m' })
+    const refreshToken = jwt.sign({ login, userId: user.user_id }, process.env.REFRESH_TOKEN_SECRET)
 
     await TokenModel.create({ token: refreshToken })
 

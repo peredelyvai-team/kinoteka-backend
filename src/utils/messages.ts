@@ -13,5 +13,17 @@ export const MESSAGES = {
 	CHANGES: 'Changes: ',
 	ADDED_IDS: 'Added ids: ',
 	REMOVED_IDS: 'Removed ids: ',
-	ATTEMPT_GET_FILMS: 'Attempt to get films: '
+	ATTEMPT_GET_FILMS: 'Attempt to get films: ',
+	ERROR_GET_VIEWED_FILMS: 'Unable to get viewed films',
+	USER_ID: 'User id: ',
+	ERROR_USER_ID_NOT_SET: 'User id is not set',
+	ATTEMPT_GET_USER: 'Attempt to get user: ',
+	ERROR_FIND_USER: 'Unable to get user',
+	FILM_IDS: 'Film ids: ',
+	FILM: 'Film: ',
+	ERROR_FILM_PARSE: 'Unable to parse film',
+	FILMS: 'Films: ',
+	ERROR_UPDATE_OTHER_USER: 'Error. You have no access to update data of other user',
+	ERROR_USER_ID: 'Error. Please, put your current user id as parameter',
+	ORIGIN: 'Current origin: '
 }

@@ -666,3 +666,2808 @@
 [2021-03-18T23:28:48.662] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: undefined
 [2021-03-18T23:28:48.682] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
 [2021-03-18T23:28:51.792] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T14:41:54.597] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: production
+[2021-03-20T14:41:54.631] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-20T14:41:55.626] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T14:42:36.217] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-20T14:42:36.230] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-20T14:42:37.233] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T14:43:24.667] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-20T14:43:24.683] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-20T14:43:25.520] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T14:45:02.175] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-20T14:45:02.192] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-20T14:45:08.580] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T14:49:37.325] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-20T14:49:37.337] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-20T14:49:38.308] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T14:51:36.680] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-20T14:51:36.693] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-20T14:51:37.647] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T14:52:57.344] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-20T14:52:57.360] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-20T14:52:58.551] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T14:56:32.602] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 184]: Attempt to get films: viewed
+[2021-03-20T14:56:32.603] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 185]: User id: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T14:56:32.604] [D:\Универ\kinoteka-backend\src\routes\user.ts] [INFO] [line 187]: Attempt to get user: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T14:56:32.675] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 191]: Retrieved user: [object Object]
+[2021-03-20T14:56:32.676] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 194]: Film ids587807,458576
+[2021-03-20T14:56:58.323] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-20T14:56:58.342] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-20T14:56:59.442] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T14:58:02.155] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 184]: Attempt to get films: viewed
+[2021-03-20T14:58:02.157] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 185]: User id: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T14:58:02.159] [D:\Универ\kinoteka-backend\src\routes\user.ts] [INFO] [line 187]: Attempt to get user: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T14:58:02.267] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 191]: Retrieved user: [object Object]
+[2021-03-20T14:58:02.269] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 194]: Film ids: 587807,458576
+[2021-03-20T14:58:23.309] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 104]: Error: connect ETIMEDOUT 52.85.242.44:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '52.85.242.44',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/587807',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T14:58:23.316] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 216]: Error: connect ETIMEDOUT 52.85.242.44:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '52.85.242.44',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/587807',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T14:58:23.322] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 217]: Unable to get viewed films
+[2021-03-20T14:58:53.511] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 184]: Attempt to get films: viewed
+[2021-03-20T14:58:53.512] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 185]: User id: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T14:58:53.514] [D:\Универ\kinoteka-backend\src\routes\user.ts] [INFO] [line 187]: Attempt to get user: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T14:58:53.592] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 191]: Retrieved user: [object Object]
+[2021-03-20T14:58:53.595] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 194]: Film ids: 587807,458576
+[2021-03-20T14:59:14.607] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 104]: Error: connect ETIMEDOUT 52.85.242.124:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '52.85.242.124',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/587807',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T14:59:14.612] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 216]: Error: connect ETIMEDOUT 52.85.242.124:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '52.85.242.124',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/587807',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T14:59:14.621] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 217]: Unable to get viewed films
+[2021-03-20T15:02:03.246] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 184]: Attempt to get films: viewed
+[2021-03-20T15:02:03.248] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 185]: User id: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T15:02:03.250] [D:\Универ\kinoteka-backend\src\routes\user.ts] [INFO] [line 187]: Attempt to get user: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T15:02:04.306] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 191]: Retrieved user: [object Object]
+[2021-03-20T15:02:04.307] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 194]: Film ids: 587807,458576
+[2021-03-20T15:02:25.412] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 104]: Error: connect ETIMEDOUT 13.33.240.18:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '13.33.240.18',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/587807',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T15:02:25.418] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 216]: Error: connect ETIMEDOUT 13.33.240.18:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '13.33.240.18',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/587807',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T15:02:25.422] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 217]: Unable to get viewed films
+[2021-03-20T16:28:07.855] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 184]: Attempt to get films: viewed
+[2021-03-20T16:28:07.858] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 185]: User id: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T16:28:07.860] [D:\Универ\kinoteka-backend\src\routes\user.ts] [INFO] [line 187]: Attempt to get user: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T16:28:08.862] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 191]: Retrieved user: [object Object]
+[2021-03-20T16:28:08.873] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 194]: Film ids: 587807,458576
+[2021-03-20T16:28:29.887] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 104]: Error: connect ETIMEDOUT 52.85.242.44:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '52.85.242.44',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/587807',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T16:28:29.897] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 216]: Error: connect ETIMEDOUT 52.85.242.44:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '52.85.242.44',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/587807',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T16:28:29.905] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 217]: Unable to get viewed films
+[2021-03-20T16:42:38.405] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-20T16:42:38.441] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-20T16:42:40.228] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T16:42:43.295] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 184]: Attempt to get films: viewed
+[2021-03-20T16:42:43.298] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 185]: User id: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T16:42:43.301] [D:\Универ\kinoteka-backend\src\routes\user.ts] [INFO] [line 187]: Attempt to get user: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-20T16:42:43.512] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 191]: Retrieved user: [object Object]
+[2021-03-20T16:42:43.515] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 194]: Film ids: 587807,458576
+[2021-03-20T16:43:04.618] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 104]: Error: connect ETIMEDOUT 52.85.242.44:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '52.85.242.44',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/587807',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T16:43:04.638] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 216]: Error: connect ETIMEDOUT 52.85.242.44:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '52.85.242.44',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/587807',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/587807?api_key=b0c70aa85c1c274dc50700994c464f36&language=ru-RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T16:43:04.646] [D:\Универ\kinoteka-backend\src\routes\user.ts] [ERROR] [line 217]: Unable to get viewed films
+[2021-03-20T16:53:23.137] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-20T16:53:23.163] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-20T16:53:24.718] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-20T16:53:48.115] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-20T16:53:48.264] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-20T16:53:48.269] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 69]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-20T16:53:48.277] [D:\Универ\kinoteka-backend\src\routes\films.ts] [INFO] [line 74]: Attempt to get films: popular
+[2021-03-20T16:53:50.405] [D:\Универ\kinoteka-backend\src\routes\films.ts] [ERROR] [line 99]: Error: connect ECONNREFUSED 52.85.242.124:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '52.85.242.124',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/popular',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T17:02:47.866] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-20T17:02:47.947] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-20T17:02:47.975] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 69]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-20T17:02:47.982] [D:\Универ\kinoteka-backend\src\routes\films.ts] [INFO] [line 74]: Attempt to get films: popular
+[2021-03-20T17:02:50.130] [D:\Универ\kinoteka-backend\src\routes\films.ts] [ERROR] [line 99]: Error: connect ECONNREFUSED 52.85.242.124:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '52.85.242.124',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/popular',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-20T17:04:40.708] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-20T17:04:40.787] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-20T17:04:40.789] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 69]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-20T17:04:40.791] [D:\Универ\kinoteka-backend\src\routes\films.ts] [INFO] [line 74]: Attempt to get films: popular
+[2021-03-20T17:05:01.844] [D:\Универ\kinoteka-backend\src\routes\films.ts] [ERROR] [line 99]: Error: connect ETIMEDOUT 52.85.242.73:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1134:16) {
+  errno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '52.85.242.73',
+  port: 443,
+  config: {
+    url: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+    method: 'get',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'User-Agent': 'axios/0.21.1'
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    data: undefined
+  },
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'https:',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      method: 'GET',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'api.themoviedb.org',
+      port: null,
+      nativeProtocols: [Object],
+      pathname: '/3/movie/popular',
+      search: '?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 0,
+    _requestBodyBuffers: [],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/0.21.1\r\n' +
+        'Host: api.themoviedb.org\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      _redirectable: [Circular],
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(isCorked)]: false,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'https://api.themoviedb.org/3/movie/popular?api_key=b0c70aa85c1c274dc50700994c464f36&page=1&region=RU'
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+[2021-03-21T13:33:01.917] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-21T13:33:01.932] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-21T13:33:03.396] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-21T13:33:10.713] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-21T13:33:10.734] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-21T13:33:12.035] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-21T13:33:37.873] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-21T13:33:37.992] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-21T13:33:37.995] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 69]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-21T13:33:37.997] [D:\Универ\kinoteka-backend\src\routes\films.ts] [INFO] [line 74]: Attempt to get films: popular
+[2021-03-21T13:33:38.854] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 80]: { viewedFilms: [587807,458576], toWatchIds: [] }
+[2021-03-21T13:33:38.856] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 82]: [
+  {
+    id: 527774,
+    overview: 'Long ago, in the fantasy world of Kumandra, humans and dragons lived together in harmony. But when an evil force threatened the land, the dragons sacrificed themselves to save humanity. Now, 500 years later, that same evil has returned and it’s up to a lone warrior, Raya, to track down the legendary last dragon to restore the fractured land and its divided people.',
+    title: 'Raya and the Last Dragon',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 791373,
+    overview: "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+    title: "Zack Snyder's Justice League",
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 587807,
+    overview: 'Tom the cat and Jerry the mouse get kicked out of their home and relocate to a fancy New York hotel, where a scrappy employee named Kayla will lose her job if she can’t evict Jerry before a high-class wedding at the hotel. Her solution? Hiring Tom to get rid of the pesky mouse.',
+    title: 'Tom & Jerry',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/6KErczPBROQty7QoIsaa6wJYXZi.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 458576,
+    overview: 'A portal transports Cpt. Artemis and an elite unit of soldiers to a strange world where powerful monsters rule with deadly ferocity. Faced with relentless danger, the team encounters a mysterious hunter who may be their only hope to find a way home.',
+    title: 'Monster Hunter',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/1UCOF11QCw8kcqvce8LKOO6pimh.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 464052,
+    overview: 'A botched store robbery places Wonder Woman in a global battle against a powerful and mysterious ancient force that puts her powers in jeopardy.',
+    title: 'Wonder Woman 1984',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 544401,
+    overview: 'Cherry drifts from college dropout to army medic in Iraq - anchored only by his true love, Emily. But after returning from the war with PTSD, his life spirals into drugs and crime as he struggles to find his place in the world.',
+    title: 'Cherry',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/pwDvkDyaHEU9V7cApQhbcSJMG1w.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 651571,
+    overview: 'A hardened mechanic must stay awake and maintain an interstellar ark fleeing the dying planet Earth with a few thousand lucky souls on board... the last of humanity. Unfortunately, humans are not the only passengers. A shapeshifting alien creature has taken residence, its only goal is to kill as many people as possible. The crew must think quickly to stop this menace before it destroys mankind.',
+    title: 'Breach',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/13B6onhL6FzSN2KaNeQeMML05pS.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 602269,
+    overview: `Deputy Sheriff Joe "Deke" Deacon joins forces with Sgt. Jim Baxter to search for a serial killer who's terrorizing Los Angeles. As they track the culprit, Baxter is unaware that the investigation is dredging up echoes of Deke's past, uncovering disturbing secrets that could threaten more than his case.`,
+    title: 'The Little Things',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/c7VlGCCgM9GZivKSzBgzuOVxQn7.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 399566,
+    overview: 'In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.',
+    title: 'Godzilla vs. Kong',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 590706,
+    overview: 'Every six years, an ancient order of jiu-jitsu fighters joins forces to battle a vicious race of alien invaders. But when a celebrated war hero goes down in defeat, the fate of the planet and mankind hangs in the balance.',
+    title: 'Jiu Jitsu',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/eLT8Cu357VOwBVTitkmlDEg32Fs.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 522444,
+    overview: 'An adventure-loving couple convince their friends to explore a remote, uncharted cave system in the forests of Northern Australia. With a tropical storm approaching, they abseil into the mouth of the cave, but when the caves start to flood, tensions rise as oxygen levels fall and the friends find themselves trapped. Unknown to them, the storm has also brought in a pack of dangerous and hungry crocodiles.',
+    title: 'Black Water: Abyss',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/95S6PinQIvVe4uJAd82a2iGZ0rA.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 630586,
+    overview: 'Jen and a group of friends set out to hike the Appalachian Trail. Despite warnings to stick to the trail, the hikers stray off course—and cross into land inhabited by The Foundation, a hidden community of mountain dwellers who use deadly means to protect their way of life.',
+    title: 'Wrong Turn',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/4U1SBHmwHkNA0eHZ2n1CuiC1K1g.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 495764,
+    overview: 'Harley Quinn joins forces with a singer, an assassin and a police detective to help a young girl who had a hit placed on her after she stole a rare diamond from a crime lord.',
+    title: 'Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/h4VB6m0RwcicVEZvzftYZyKXs6K.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 508442,
+    overview: 'Joe Gardner is a middle school teacher with a love for jazz music. After a successful gig at the Half Note Club, he suddenly gets into an accident that separates his soul from his body and is transported to the You Seminar, a center in which souls develop and gain passions before being transported to a newborn child. Joe must enlist help from the other souls-in-training, like 22, a soul who has spent eons in the You Seminar, in order to get back to Earth.',
+    title: 'Soul',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 604822,
+    overview: "Covert security company Vanguard is the last hope of survival for an accountant after he is targeted by the world's deadliest mercenary organization.",
+    title: 'Vanguard',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/mKvw1Ic9enfFlCPBNJGiejRPMUO.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 529203,
+    overview: "Searching for a safer habitat, the prehistoric Crood family discovers an idyllic, walled-in paradise that meets all of its needs. Unfortunately, they must also learn to live with the Bettermans -- a family that's a couple of steps above the Croods on the evolutionary ladder. As tensions between the new neighbors start to rise, a new threat soon propels both clans on an epic adventure that forces them to embrace their differences, draw strength from one another, and survive together.",
+    title: 'The Croods: A New Age',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/tbVZ3Sq88dZaCANlUcewQuHQOaE.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 560144,
+    overview: "When a virus threatens to turn the now earth-dwelling friendly alien hybrids against humans, Captain Rose Corley must lead a team of elite mercenaries on a mission to the alien world in order to save what's left of humanity.",
+    title: 'Skylines',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/2W4ZvACURDyhiNnSIaFPHfNbny3.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 638597,
+    overview: "A mom and dad who usually say no decide to say yes to their kids' wildest requests — with a few ground rules — on a whirlwind day of fun and adventure.",
+    title: 'Yes Day',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/rejrD9ovTHJbfmpLM0mbEliEPV6.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 141052,
+    overview: "Fuelled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth.",
+    title: 'Justice League',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/eifGNCSDuxJeS1loAXil5bIGgvC.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 539885,
+    overview: 'A black ops assassin is forced to fight for her own survival after a job goes dangerously wrong.',
+    title: 'Ava',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg',
+    viewed: false,
+    to_watched: false
+  }
+]
+[2021-03-21T13:34:55.639] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-21T13:34:55.652] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-21T13:34:57.117] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-21T13:35:55.942] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-21T13:35:56.111] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-21T13:35:56.114] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 69]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-21T13:35:56.115] [D:\Универ\kinoteka-backend\src\routes\films.ts] [INFO] [line 74]: Attempt to get films: popular
+[2021-03-21T13:35:57.077] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 80]: { viewedFilms: [587807,458576], toWatchIds: [] }
+[2021-03-21T13:35:57.080] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 82]: [
+  {
+    id: 527774,
+    overview: 'Long ago, in the fantasy world of Kumandra, humans and dragons lived together in harmony. But when an evil force threatened the land, the dragons sacrificed themselves to save humanity. Now, 500 years later, that same evil has returned and it’s up to a lone warrior, Raya, to track down the legendary last dragon to restore the fractured land and its divided people.',
+    title: 'Raya and the Last Dragon',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 791373,
+    overview: "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+    title: "Zack Snyder's Justice League",
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 587807,
+    overview: 'Tom the cat and Jerry the mouse get kicked out of their home and relocate to a fancy New York hotel, where a scrappy employee named Kayla will lose her job if she can’t evict Jerry before a high-class wedding at the hotel. Her solution? Hiring Tom to get rid of the pesky mouse.',
+    title: 'Tom & Jerry',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/6KErczPBROQty7QoIsaa6wJYXZi.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 458576,
+    overview: 'A portal transports Cpt. Artemis and an elite unit of soldiers to a strange world where powerful monsters rule with deadly ferocity. Faced with relentless danger, the team encounters a mysterious hunter who may be their only hope to find a way home.',
+    title: 'Monster Hunter',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/1UCOF11QCw8kcqvce8LKOO6pimh.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 464052,
+    overview: 'A botched store robbery places Wonder Woman in a global battle against a powerful and mysterious ancient force that puts her powers in jeopardy.',
+    title: 'Wonder Woman 1984',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 544401,
+    overview: 'Cherry drifts from college dropout to army medic in Iraq - anchored only by his true love, Emily. But after returning from the war with PTSD, his life spirals into drugs and crime as he struggles to find his place in the world.',
+    title: 'Cherry',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/pwDvkDyaHEU9V7cApQhbcSJMG1w.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 651571,
+    overview: 'A hardened mechanic must stay awake and maintain an interstellar ark fleeing the dying planet Earth with a few thousand lucky souls on board... the last of humanity. Unfortunately, humans are not the only passengers. A shapeshifting alien creature has taken residence, its only goal is to kill as many people as possible. The crew must think quickly to stop this menace before it destroys mankind.',
+    title: 'Breach',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/13B6onhL6FzSN2KaNeQeMML05pS.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 602269,
+    overview: `Deputy Sheriff Joe "Deke" Deacon joins forces with Sgt. Jim Baxter to search for a serial killer who's terrorizing Los Angeles. As they track the culprit, Baxter is unaware that the investigation is dredging up echoes of Deke's past, uncovering disturbing secrets that could threaten more than his case.`,
+    title: 'The Little Things',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/c7VlGCCgM9GZivKSzBgzuOVxQn7.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 399566,
+    overview: 'In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.',
+    title: 'Godzilla vs. Kong',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 590706,
+    overview: 'Every six years, an ancient order of jiu-jitsu fighters joins forces to battle a vicious race of alien invaders. But when a celebrated war hero goes down in defeat, the fate of the planet and mankind hangs in the balance.',
+    title: 'Jiu Jitsu',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/eLT8Cu357VOwBVTitkmlDEg32Fs.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 522444,
+    overview: 'An adventure-loving couple convince their friends to explore a remote, uncharted cave system in the forests of Northern Australia. With a tropical storm approaching, they abseil into the mouth of the cave, but when the caves start to flood, tensions rise as oxygen levels fall and the friends find themselves trapped. Unknown to them, the storm has also brought in a pack of dangerous and hungry crocodiles.',
+    title: 'Black Water: Abyss',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/95S6PinQIvVe4uJAd82a2iGZ0rA.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 630586,
+    overview: 'Jen and a group of friends set out to hike the Appalachian Trail. Despite warnings to stick to the trail, the hikers stray off course—and cross into land inhabited by The Foundation, a hidden community of mountain dwellers who use deadly means to protect their way of life.',
+    title: 'Wrong Turn',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/4U1SBHmwHkNA0eHZ2n1CuiC1K1g.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 495764,
+    overview: 'Harley Quinn joins forces with a singer, an assassin and a police detective to help a young girl who had a hit placed on her after she stole a rare diamond from a crime lord.',
+    title: 'Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/h4VB6m0RwcicVEZvzftYZyKXs6K.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 508442,
+    overview: 'Joe Gardner is a middle school teacher with a love for jazz music. After a successful gig at the Half Note Club, he suddenly gets into an accident that separates his soul from his body and is transported to the You Seminar, a center in which souls develop and gain passions before being transported to a newborn child. Joe must enlist help from the other souls-in-training, like 22, a soul who has spent eons in the You Seminar, in order to get back to Earth.',
+    title: 'Soul',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 604822,
+    overview: "Covert security company Vanguard is the last hope of survival for an accountant after he is targeted by the world's deadliest mercenary organization.",
+    title: 'Vanguard',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/mKvw1Ic9enfFlCPBNJGiejRPMUO.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 529203,
+    overview: "Searching for a safer habitat, the prehistoric Crood family discovers an idyllic, walled-in paradise that meets all of its needs. Unfortunately, they must also learn to live with the Bettermans -- a family that's a couple of steps above the Croods on the evolutionary ladder. As tensions between the new neighbors start to rise, a new threat soon propels both clans on an epic adventure that forces them to embrace their differences, draw strength from one another, and survive together.",
+    title: 'The Croods: A New Age',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/tbVZ3Sq88dZaCANlUcewQuHQOaE.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 560144,
+    overview: "When a virus threatens to turn the now earth-dwelling friendly alien hybrids against humans, Captain Rose Corley must lead a team of elite mercenaries on a mission to the alien world in order to save what's left of humanity.",
+    title: 'Skylines',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/2W4ZvACURDyhiNnSIaFPHfNbny3.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 638597,
+    overview: "A mom and dad who usually say no decide to say yes to their kids' wildest requests — with a few ground rules — on a whirlwind day of fun and adventure.",
+    title: 'Yes Day',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/rejrD9ovTHJbfmpLM0mbEliEPV6.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 141052,
+    overview: "Fuelled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth.",
+    title: 'Justice League',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/eifGNCSDuxJeS1loAXil5bIGgvC.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 539885,
+    overview: 'A black ops assassin is forced to fight for her own survival after a job goes dangerously wrong.',
+    title: 'Ava',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg',
+    viewed: false,
+    to_watched: false
+  }
+]
+[2021-03-21T13:37:52.691] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-21T13:37:52.838] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-21T13:37:52.840] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 143]: Retrieved user: {
+  viewed_ids: [ 587807, 458576 ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 2
+}
+[2021-03-21T13:37:52.841] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 148]: Added ids: 527774,791373,587807,458576,464052,544401,651571
+[2021-03-21T13:37:52.841] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 149]: Removed ids: 
+[2021-03-21T13:37:52.964] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 161]: Viewed films: 587807,458576,527774,791373,464052,544401,651571
+[2021-03-21T13:37:53.093] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 163]: document saved
+[2021-03-21T13:37:59.193] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-21T13:37:59.359] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [
+    587807, 458576,
+    527774, 791373,
+    464052, 544401,
+    651571
+  ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 3
+}
+[2021-03-21T13:37:59.362] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 69]: {
+  viewed_ids: [
+    587807, 458576,
+    527774, 791373,
+    464052, 544401,
+    651571
+  ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 3
+}
+[2021-03-21T13:37:59.363] [D:\Универ\kinoteka-backend\src\routes\films.ts] [INFO] [line 74]: Attempt to get films: popular
+[2021-03-21T13:38:00.446] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 80]: {
+  viewedFilms: [587807,458576,527774,791373,464052,544401,651571],
+  toWatchIds: []
+}
+[2021-03-21T13:38:00.448] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 82]: [
+  {
+    id: 527774,
+    overview: 'Long ago, in the fantasy world of Kumandra, humans and dragons lived together in harmony. But when an evil force threatened the land, the dragons sacrificed themselves to save humanity. Now, 500 years later, that same evil has returned and it’s up to a lone warrior, Raya, to track down the legendary last dragon to restore the fractured land and its divided people.',
+    title: 'Raya and the Last Dragon',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 791373,
+    overview: "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+    title: "Zack Snyder's Justice League",
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 587807,
+    overview: 'Tom the cat and Jerry the mouse get kicked out of their home and relocate to a fancy New York hotel, where a scrappy employee named Kayla will lose her job if she can’t evict Jerry before a high-class wedding at the hotel. Her solution? Hiring Tom to get rid of the pesky mouse.',
+    title: 'Tom & Jerry',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/6KErczPBROQty7QoIsaa6wJYXZi.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 458576,
+    overview: 'A portal transports Cpt. Artemis and an elite unit of soldiers to a strange world where powerful monsters rule with deadly ferocity. Faced with relentless danger, the team encounters a mysterious hunter who may be their only hope to find a way home.',
+    title: 'Monster Hunter',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/1UCOF11QCw8kcqvce8LKOO6pimh.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 464052,
+    overview: 'A botched store robbery places Wonder Woman in a global battle against a powerful and mysterious ancient force that puts her powers in jeopardy.',
+    title: 'Wonder Woman 1984',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 544401,
+    overview: 'Cherry drifts from college dropout to army medic in Iraq - anchored only by his true love, Emily. But after returning from the war with PTSD, his life spirals into drugs and crime as he struggles to find his place in the world.',
+    title: 'Cherry',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/pwDvkDyaHEU9V7cApQhbcSJMG1w.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 651571,
+    overview: 'A hardened mechanic must stay awake and maintain an interstellar ark fleeing the dying planet Earth with a few thousand lucky souls on board... the last of humanity. Unfortunately, humans are not the only passengers. A shapeshifting alien creature has taken residence, its only goal is to kill as many people as possible. The crew must think quickly to stop this menace before it destroys mankind.',
+    title: 'Breach',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/13B6onhL6FzSN2KaNeQeMML05pS.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 602269,
+    overview: `Deputy Sheriff Joe "Deke" Deacon joins forces with Sgt. Jim Baxter to search for a serial killer who's terrorizing Los Angeles. As they track the culprit, Baxter is unaware that the investigation is dredging up echoes of Deke's past, uncovering disturbing secrets that could threaten more than his case.`,
+    title: 'The Little Things',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/c7VlGCCgM9GZivKSzBgzuOVxQn7.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 399566,
+    overview: 'In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.',
+    title: 'Godzilla vs. Kong',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 590706,
+    overview: 'Every six years, an ancient order of jiu-jitsu fighters joins forces to battle a vicious race of alien invaders. But when a celebrated war hero goes down in defeat, the fate of the planet and mankind hangs in the balance.',
+    title: 'Jiu Jitsu',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/eLT8Cu357VOwBVTitkmlDEg32Fs.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 522444,
+    overview: 'An adventure-loving couple convince their friends to explore a remote, uncharted cave system in the forests of Northern Australia. With a tropical storm approaching, they abseil into the mouth of the cave, but when the caves start to flood, tensions rise as oxygen levels fall and the friends find themselves trapped. Unknown to them, the storm has also brought in a pack of dangerous and hungry crocodiles.',
+    title: 'Black Water: Abyss',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/95S6PinQIvVe4uJAd82a2iGZ0rA.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 630586,
+    overview: 'Jen and a group of friends set out to hike the Appalachian Trail. Despite warnings to stick to the trail, the hikers stray off course—and cross into land inhabited by The Foundation, a hidden community of mountain dwellers who use deadly means to protect their way of life.',
+    title: 'Wrong Turn',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/4U1SBHmwHkNA0eHZ2n1CuiC1K1g.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 495764,
+    overview: 'Harley Quinn joins forces with a singer, an assassin and a police detective to help a young girl who had a hit placed on her after she stole a rare diamond from a crime lord.',
+    title: 'Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/h4VB6m0RwcicVEZvzftYZyKXs6K.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 508442,
+    overview: 'Joe Gardner is a middle school teacher with a love for jazz music. After a successful gig at the Half Note Club, he suddenly gets into an accident that separates his soul from his body and is transported to the You Seminar, a center in which souls develop and gain passions before being transported to a newborn child. Joe must enlist help from the other souls-in-training, like 22, a soul who has spent eons in the You Seminar, in order to get back to Earth.',
+    title: 'Soul',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 604822,
+    overview: "Covert security company Vanguard is the last hope of survival for an accountant after he is targeted by the world's deadliest mercenary organization.",
+    title: 'Vanguard',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/mKvw1Ic9enfFlCPBNJGiejRPMUO.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 529203,
+    overview: "Searching for a safer habitat, the prehistoric Crood family discovers an idyllic, walled-in paradise that meets all of its needs. Unfortunately, they must also learn to live with the Bettermans -- a family that's a couple of steps above the Croods on the evolutionary ladder. As tensions between the new neighbors start to rise, a new threat soon propels both clans on an epic adventure that forces them to embrace their differences, draw strength from one another, and survive together.",
+    title: 'The Croods: A New Age',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/tbVZ3Sq88dZaCANlUcewQuHQOaE.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 560144,
+    overview: "When a virus threatens to turn the now earth-dwelling friendly alien hybrids against humans, Captain Rose Corley must lead a team of elite mercenaries on a mission to the alien world in order to save what's left of humanity.",
+    title: 'Skylines',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/2W4ZvACURDyhiNnSIaFPHfNbny3.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 638597,
+    overview: "A mom and dad who usually say no decide to say yes to their kids' wildest requests — with a few ground rules — on a whirlwind day of fun and adventure.",
+    title: 'Yes Day',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/rejrD9ovTHJbfmpLM0mbEliEPV6.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 141052,
+    overview: "Fuelled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth.",
+    title: 'Justice League',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/eifGNCSDuxJeS1loAXil5bIGgvC.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 539885,
+    overview: 'A black ops assassin is forced to fight for her own survival after a job goes dangerously wrong.',
+    title: 'Ava',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg',
+    viewed: false,
+    to_watched: false
+  }
+]
+[2021-03-21T13:40:43.833] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-21T13:40:43.846] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-21T13:40:45.259] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-21T13:41:34.897] [D:\Универ\kinoteka-backend\src\utils\tmdbApi.ts] [DEBUG] [line 10]: Current origin: undefined
+[2021-03-21T13:41:35.366] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-21T13:41:35.379] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-21T13:41:36.689] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-21T13:42:09.262] [D:\Универ\kinoteka-backend\src\utils\tmdbApi.ts] [DEBUG] [line 10]: Current origin: undefined
+[2021-03-21T13:42:09.685] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-21T13:42:09.696] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-21T13:42:10.970] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-21T13:45:54.537] [D:\Универ\kinoteka-backend\src\utils\tmdbApi.ts] [DEBUG] [line 10]: undefined
+[2021-03-21T13:45:54.541] [D:\Универ\kinoteka-backend\src\utils\tmdbApi.ts] [DEBUG] [line 11]: undefined
+[2021-03-21T13:45:54.922] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-21T13:45:54.932] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-21T13:45:56.652] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-21T13:47:21.206] [D:\Универ\kinoteka-backend\src\utils\tmdbApi.ts] [DEBUG] [line 10]: https://kinoteka-app.herokuapp.com
+[2021-03-21T13:47:21.210] [D:\Универ\kinoteka-backend\src\utils\tmdbApi.ts] [DEBUG] [line 11]: localhost:3000
+[2021-03-21T13:47:21.674] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-21T13:47:21.685] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-21T13:47:23.294] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-21T13:47:51.790] [D:\Универ\kinoteka-backend\src\utils\tmdbApi.ts] [DEBUG] [line 10]: Current origin: localhost:3000
+[2021-03-21T13:47:52.228] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-21T13:47:52.240] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-21T13:47:53.619] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-21T13:48:04.636] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-21T13:48:04.826] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [
+    587807, 458576,
+    527774, 791373,
+    464052, 544401,
+    651571
+  ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 3
+}
+[2021-03-21T13:48:04.829] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 69]: {
+  viewed_ids: [
+    587807, 458576,
+    527774, 791373,
+    464052, 544401,
+    651571
+  ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 3
+}
+[2021-03-21T13:48:04.830] [D:\Универ\kinoteka-backend\src\routes\films.ts] [INFO] [line 74]: Attempt to get films: popular
+[2021-03-21T13:48:05.894] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 80]: {
+  viewedFilms: [587807,458576,527774,791373,464052,544401,651571],
+  toWatchIds: []
+}
+[2021-03-21T13:48:05.896] [D:\Универ\kinoteka-backend\src\routes\films.ts] [DEBUG] [line 82]: [
+  {
+    id: 527774,
+    overview: 'Long ago, in the fantasy world of Kumandra, humans and dragons lived together in harmony. But when an evil force threatened the land, the dragons sacrificed themselves to save humanity. Now, 500 years later, that same evil has returned and it’s up to a lone warrior, Raya, to track down the legendary last dragon to restore the fractured land and its divided people.',
+    title: 'Raya and the Last Dragon',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 791373,
+    overview: "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+    title: "Zack Snyder's Justice League",
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 587807,
+    overview: 'Tom the cat and Jerry the mouse get kicked out of their home and relocate to a fancy New York hotel, where a scrappy employee named Kayla will lose her job if she can’t evict Jerry before a high-class wedding at the hotel. Her solution? Hiring Tom to get rid of the pesky mouse.',
+    title: 'Tom & Jerry',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/6KErczPBROQty7QoIsaa6wJYXZi.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 458576,
+    overview: 'A portal transports Cpt. Artemis and an elite unit of soldiers to a strange world where powerful monsters rule with deadly ferocity. Faced with relentless danger, the team encounters a mysterious hunter who may be their only hope to find a way home.',
+    title: 'Monster Hunter',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/1UCOF11QCw8kcqvce8LKOO6pimh.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 464052,
+    overview: 'A botched store robbery places Wonder Woman in a global battle against a powerful and mysterious ancient force that puts her powers in jeopardy.',
+    title: 'Wonder Woman 1984',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 544401,
+    overview: 'Cherry drifts from college dropout to army medic in Iraq - anchored only by his true love, Emily. But after returning from the war with PTSD, his life spirals into drugs and crime as he struggles to find his place in the world.',
+    title: 'Cherry',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/pwDvkDyaHEU9V7cApQhbcSJMG1w.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 651571,
+    overview: 'A hardened mechanic must stay awake and maintain an interstellar ark fleeing the dying planet Earth with a few thousand lucky souls on board... the last of humanity. Unfortunately, humans are not the only passengers. A shapeshifting alien creature has taken residence, its only goal is to kill as many people as possible. The crew must think quickly to stop this menace before it destroys mankind.',
+    title: 'Breach',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/13B6onhL6FzSN2KaNeQeMML05pS.jpg',
+    viewed: true,
+    to_watched: false
+  },
+  {
+    id: 602269,
+    overview: `Deputy Sheriff Joe "Deke" Deacon joins forces with Sgt. Jim Baxter to search for a serial killer who's terrorizing Los Angeles. As they track the culprit, Baxter is unaware that the investigation is dredging up echoes of Deke's past, uncovering disturbing secrets that could threaten more than his case.`,
+    title: 'The Little Things',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/c7VlGCCgM9GZivKSzBgzuOVxQn7.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 399566,
+    overview: 'In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.',
+    title: 'Godzilla vs. Kong',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 590706,
+    overview: 'Every six years, an ancient order of jiu-jitsu fighters joins forces to battle a vicious race of alien invaders. But when a celebrated war hero goes down in defeat, the fate of the planet and mankind hangs in the balance.',
+    title: 'Jiu Jitsu',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/eLT8Cu357VOwBVTitkmlDEg32Fs.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 522444,
+    overview: 'An adventure-loving couple convince their friends to explore a remote, uncharted cave system in the forests of Northern Australia. With a tropical storm approaching, they abseil into the mouth of the cave, but when the caves start to flood, tensions rise as oxygen levels fall and the friends find themselves trapped. Unknown to them, the storm has also brought in a pack of dangerous and hungry crocodiles.',
+    title: 'Black Water: Abyss',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/95S6PinQIvVe4uJAd82a2iGZ0rA.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 630586,
+    overview: 'Jen and a group of friends set out to hike the Appalachian Trail. Despite warnings to stick to the trail, the hikers stray off course—and cross into land inhabited by The Foundation, a hidden community of mountain dwellers who use deadly means to protect their way of life.',
+    title: 'Wrong Turn',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/4U1SBHmwHkNA0eHZ2n1CuiC1K1g.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 495764,
+    overview: 'Harley Quinn joins forces with a singer, an assassin and a police detective to help a young girl who had a hit placed on her after she stole a rare diamond from a crime lord.',
+    title: 'Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/h4VB6m0RwcicVEZvzftYZyKXs6K.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 508442,
+    overview: 'Joe Gardner is a middle school teacher with a love for jazz music. After a successful gig at the Half Note Club, he suddenly gets into an accident that separates his soul from his body and is transported to the You Seminar, a center in which souls develop and gain passions before being transported to a newborn child. Joe must enlist help from the other souls-in-training, like 22, a soul who has spent eons in the You Seminar, in order to get back to Earth.',
+    title: 'Soul',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 604822,
+    overview: "Covert security company Vanguard is the last hope of survival for an accountant after he is targeted by the world's deadliest mercenary organization.",
+    title: 'Vanguard',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/mKvw1Ic9enfFlCPBNJGiejRPMUO.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 529203,
+    overview: "Searching for a safer habitat, the prehistoric Crood family discovers an idyllic, walled-in paradise that meets all of its needs. Unfortunately, they must also learn to live with the Bettermans -- a family that's a couple of steps above the Croods on the evolutionary ladder. As tensions between the new neighbors start to rise, a new threat soon propels both clans on an epic adventure that forces them to embrace their differences, draw strength from one another, and survive together.",
+    title: 'The Croods: A New Age',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/tbVZ3Sq88dZaCANlUcewQuHQOaE.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 560144,
+    overview: "When a virus threatens to turn the now earth-dwelling friendly alien hybrids against humans, Captain Rose Corley must lead a team of elite mercenaries on a mission to the alien world in order to save what's left of humanity.",
+    title: 'Skylines',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/2W4ZvACURDyhiNnSIaFPHfNbny3.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 638597,
+    overview: "A mom and dad who usually say no decide to say yes to their kids' wildest requests — with a few ground rules — on a whirlwind day of fun and adventure.",
+    title: 'Yes Day',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/rejrD9ovTHJbfmpLM0mbEliEPV6.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 141052,
+    overview: "Fuelled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth.",
+    title: 'Justice League',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/eifGNCSDuxJeS1loAXil5bIGgvC.jpg',
+    viewed: false,
+    to_watched: false
+  },
+  {
+    id: 539885,
+    overview: 'A black ops assassin is forced to fight for her own survival after a job goes dangerously wrong.',
+    title: 'Ava',
+    poster_path: 'https://www.themoviedb.org/t/p/w220_and_h330_face/qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg',
+    viewed: false,
+    to_watched: false
+  }
+]
+[2021-03-21T13:48:26.991] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-21T13:48:27.173] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [
+    587807, 458576,
+    527774, 791373,
+    464052, 544401,
+    651571
+  ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 3
+}
+[2021-03-21T13:48:49.103] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 184]: Attempt to get films: viewed
+[2021-03-21T13:48:49.105] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 185]: User id: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-21T13:48:49.106] [D:\Универ\kinoteka-backend\src\routes\user.ts] [INFO] [line 187]: Attempt to get user: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-21T13:48:49.283] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 191]: Retrieved user: [object Object]
+[2021-03-21T13:48:49.283] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 194]: Film ids: 587807,458576,527774,791373,464052,544401,651571
+[2021-03-21T13:48:50.295] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:48:50.296] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 100]: Films: [object Object]
+[2021-03-21T13:48:51.003] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:48:51.004] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 100]: Films: [object Object],[object Object]
+[2021-03-21T13:48:51.731] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:48:51.732] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 100]: Films: [object Object],[object Object],[object Object]
+[2021-03-21T13:48:52.436] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:48:52.436] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 100]: Films: [object Object],[object Object],[object Object],[object Object]
+[2021-03-21T13:48:53.135] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:48:53.140] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 100]: Films: [object Object],[object Object],[object Object],[object Object],[object Object]
+[2021-03-21T13:48:53.846] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:48:53.847] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 100]: Films: [object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+[2021-03-21T13:48:54.485] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:48:54.486] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 100]: Films: [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+[2021-03-21T13:49:34.149] [D:\Универ\kinoteka-backend\src\utils\tmdbApi.ts] [DEBUG] [line 10]: Current origin: localhost:3000
+[2021-03-21T13:49:34.586] [D:\Универ\kinoteka-backend\src\database.ts] [INFO] [line 23]: Running on environment: test
+[2021-03-21T13:49:34.597] [D:\Универ\kinoteka-backend\src\app.ts] [DEBUG] [line 49]: Start application
+[2021-03-21T13:49:36.132] [D:\Универ\kinoteka-backend\src\database.ts] [DEBUG] [line 53]: database connected
+[2021-03-21T13:49:43.477] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 184]: Attempt to get films: viewed
+[2021-03-21T13:49:43.479] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 185]: User id: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-21T13:49:43.480] [D:\Универ\kinoteka-backend\src\routes\user.ts] [INFO] [line 187]: Attempt to get user: 3d071f3d-809e-4e48-ae13-201ceca31b27
+[2021-03-21T13:49:43.656] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 191]: Retrieved user: [object Object]
+[2021-03-21T13:49:43.657] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 194]: Film ids: 587807,458576,527774,791373,464052,544401,651571
+[2021-03-21T13:49:44.656] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:49:45.278] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:49:45.930] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:49:46.814] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:49:47.464] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:49:48.097] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:49:48.849] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 88]: Film: [object Object]
+[2021-03-21T13:49:48.850] [D:\Универ\kinoteka-backend\src\routes\user.ts] [DEBUG] [line 101]: Films: [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+[2021-03-21T13:50:30.458] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 27]: denisgridin
+[2021-03-21T13:50:30.608] [D:\Универ\kinoteka-backend\src\utils\helpers.ts] [DEBUG] [line 29]: {
+  viewed_ids: [
+    587807, 458576,
+    527774, 791373,
+    464052, 544401,
+    651571
+  ],
+  to_watch_ids: [],
+  friends: [],
+  _id: 6050bdc321d7d74544349fa1,
+  user_id: '3d071f3d-809e-4e48-ae13-201ceca31b27',
+  login: 'denisgridin',
+  password: '$2b$10$mKuBtDR0OFsUuk1wv75Nfut/j90q7HVAOxZQkkefbhVvibsBiiP0C',
+  __v: 3
+}

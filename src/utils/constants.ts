@@ -6,10 +6,10 @@ export const PATH = {
   token: '/token',
 	
 	users: {
-  	films: {
-  		viewed: '/users/films/viewed',
-		  to_watch: '/users/films/to_watch'
-	  }
+		films: {
+			viewed: '/users/:id/films/viewed',
+			to_watch: '/users/films/to_watch'
+		}
 	},
 	
   films: {

@@ -38,3 +38,13 @@ export function getCurrentUser (req: Request) {
 		}
 	})
 }
+
+export interface ILoopCallback {
+
+}
+
+export async function asyncForEach (array: any[], callback: (item: any, index?: number, array?: any[]) => void) {
+	for (let i = 0; i < array.length; i++) {
+		await callback(array[i], i, array)
+	}
+}

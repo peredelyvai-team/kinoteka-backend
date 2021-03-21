@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express'
 import { connect } from "~/database"
 import * as fs from "fs"
+require('dotenv').config()
 
 import { userRouter } from "./routes/user"
 import { authRouter } from './routes/authorization'
@@ -9,12 +10,11 @@ import {ENV} from "utils/enums"
 import {log} from "utils/logger";
 
 const cookieParser = require('cookie-parser')
-require('dotenv').config()
 const path = require("path")
 const logger = require('morgan')
 const app = express()
 
-process.env.NODE_ENV = process.env.NODE_ENV === ENV.production ? ENV.test : ENV.production
+process.env.NODE_ENV = process.env.NODE_ENV || ENV.test
 // process.env.DEBUG = "*"
 
 
