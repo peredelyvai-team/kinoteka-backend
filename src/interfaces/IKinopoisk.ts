@@ -1,3 +1,6 @@
+import {KP_VIDEO} from "utils/enums";
+import {getFilmTrailer} from "utils/kinopoisk-api";
+
 export interface IKPFilm {
 	filmId: number,
 	nameRu: string,
@@ -7,10 +10,12 @@ export interface IKPFilm {
 	countries: { country: string }[],
 	genres: { genre: string }[],
 	rating: string,
-	ratingVoteCount: number,
+	ratingVoteCount?: number,
 	posterUrl: string,
 	posterUrlPreview: string,
-	ratingChange: any
+	ratingChange?: any,
+	description?: string,
+	premiereWorld?: string
 }
 
 
@@ -28,4 +33,31 @@ export interface IKPFilmMinimize {
 	year: string,
 	duration: string,
 	rating: string
+}
+
+export interface IKPFilmFullData {
+	id: number,
+	title: string,
+	overview: string,
+	poster_small: string,
+	poster_big: string,
+	viewed: boolean,
+	to_watched: boolean,
+	release_date: string,
+	genres: string[],
+	runtime: string,
+	trailer_path: string
+}
+
+export interface IKPVideo {
+	url: string,
+	name: string,
+	site: string,
+	size: number,
+	type: KP_VIDEO
+}
+
+export interface IKPVideos {
+	trailers: IKPVideo[],
+	teasers: IKPVideo[]
 }

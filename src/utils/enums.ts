@@ -41,3 +41,8 @@ export enum KP_TYPE_OF_TOP {
 	TOP_100_POPULAR_FILMS = 'TOP_100_POPULAR_FILMS',
 	TOP_AWAIT_FILMS = 'TOP_AWAIT_FILMS'
 }
+
+export enum KP_VIDEO {
+	trailer = 'TRAILER',
+	teaser = 'TEASER'
+}
