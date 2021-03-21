@@ -1,7 +1,0 @@
-[0mGET /films/popular [33m403 [0m24.177 ms - 9[0m
-[0mPOST /login [32m200 [0m419.183 ms - 456[0m
-[0mGET /films/popular [32m200 [0m1403.898 ms - 9184[0m
-[0mGET /films/popular [32m200 [0m1111.904 ms - 9184[0m
-[0mGET /users/3d071f3d-809e-4e48-ae13-201ceca31b27/films/viewed [31m500 [0m1938.015 ms - 1125[0m
-[0mPOST /login [32m200 [0m243.686 ms - 456[0m
-[0mPUT /users/3d071f3d-809e-4e48-ae13-201ceca31b27/films/viewed [31m500 [0m9.502 ms - 2[0m

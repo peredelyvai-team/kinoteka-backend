@@ -6,9 +6,10 @@ import {IUser, IUserCondition, IUserFilms} from "db.users/users.types"
 import {MESSAGES} from "utils/messages";
 import {authenticationCheck} from "~/middlewares/jwtAuth";
 import {errorHandler, getCurrentUser, getTokenFromRequest} from "utils/helpers";
-import {getFilmTrailer, getPopularFilms, getSelectedFilm} from "utils/tmdbApi";
 import {IFilm, IFilmData, IFilmMinimize, ITMDBResponse, ITMDBResponseData} from "interfaces/ITMDB";
 import {log} from "utils/logger";
+import {IKPFilmMinimize, IKPFilmsResponseData} from "interfaces/IKinopoisk";
+import {getPopularFilms} from "utils/kinopoisk-api";
 const filmsRouter = express.Router()
 
 export function getPosterPath (poster_path: string): string {
@@ -23,45 +24,47 @@ function getFilmGenres (genres: { id: number, name: string }[] = []): string[] {
 	return genres.map(genre => genre.name)
 }
 
-function parseUserFilmsArray (data: ITMDBResponseData, userFilms: IUserFilms ): Array<IFilmMinimize> {
-	return data.results.map(el => {
+function parseUserFilmsArray (data: IKPFilmsResponseData, userFilms: IUserFilms ): Array<IKPFilmMinimize> {
+	return data.films.map(el => {
 		return {
-			id: el.id,
-			overview: el.overview,
-			title: el.title,
-			poster_path: getPosterPath(el.poster_path),
-			viewed: userFilms.viewedFilms.includes(el.id),
-			to_watched: userFilms.toWatchIds.includes(el.id)
+			id: el.filmId,
+			title: el.nameRu,
+			poster_small: el.posterUrlPreview,
+			viewed: userFilms.viewedFilms.includes(el.filmId),
+			to_watched: userFilms.toWatchIds.includes(el.filmId),
+			year: el.year,
+			duration: el.filmLength,
+			rating: el.rating
 		}
 	})
 }
 
-function setFullFilmInfo (id: string, film: IFilm, userFilms: IUserFilms): Promise<IFilmData> {
-	return new Promise(async (resolve, reject) => {
-		try {
-			console.log(film)
-			const filmData: IFilmData = {
-				id: parseInt(id),
-				title: film.title,
-				overview: film.overview,
-				poster_path: getPosterPath(film.poster_path),
-				viewed: userFilms.viewedFilms.includes(film.id),
-				to_watched: userFilms.toWatchIds.includes(film.id),
-				tagline: film.tagline,
-				
-				backdrop_path: getBackdropPath(film.backdrop_path),
-				release_date: film.release_date,
-				genres: getFilmGenres(film.genres),
-				runtime: film.runtime,
-				trailer_path: await getFilmTrailer(id)
-			}
-			resolve(filmData)
-		} catch (error) {
-			console.log(error)
-			reject(error)
-		}
-	})
-}
+// function setFullFilmInfo (id: string, film: IFilm, userFilms: IUserFilms): Promise<IFilmData> {
+// 	return new Promise(async (resolve, reject) => {
+// 		try {
+// 			console.log(film)
+// 			const filmData: IFilmData = {
+// 				id: parseInt(id),
+// 				title: film.title,
+// 				overview: film.overview,
+// 				poster_path: getPosterPath(film.poster_path),
+// 				viewed: userFilms.viewedFilms.includes(film.id),
+// 				to_watched: userFilms.toWatchIds.includes(film.id),
+// 				tagline: film.tagline,
+//
+// 				backdrop_path: getBackdropPath(film.backdrop_path),
+// 				release_date: film.release_date,
+// 				genres: getFilmGenres(film.genres),
+// 				runtime: film.runtime,
+// 				trailer_path: await getFilmTrailer(id)
+// 			}
+// 			resolve(filmData)
+// 		} catch (error) {
+// 			console.log(error)
+// 			reject(error)
+// 		}
+// 	})
+// }
 
 filmsRouter.get(PATH.films.popular, authenticationCheck, async (req: Request, res: Response) => {
 	try {
@@ -72,8 +75,8 @@ filmsRouter.get(PATH.films.popular, authenticationCheck, async (req: Request, re
 			
 			const page: string = req.query.page?.toString() || '1'
 			log.info(MESSAGES.ATTEMPT_GET_FILMS + 'popular')
-			const popularFilms: any = await getPopularFilms({ page: parseInt(page), lang: 'ru-RU' })
-			const data: ITMDBResponseData = popularFilms.data
+			const popularFilms: any = await getPopularFilms({ page: parseInt(page) })
+			const data: IKPFilmsResponseData = popularFilms.data
 			
 			const viewedFilms = user.viewed_ids as number[]
 			const toWatchIds = user.to_watch_ids as number[]
@@ -83,9 +86,7 @@ filmsRouter.get(PATH.films.popular, authenticationCheck, async (req: Request, re
 			if (parsedFilms) {
 				return res.json({
 					popularFilms: parsedFilms,
-					page: data.page,
-					totalResults: data.total_results,
-					totalPages: data.total_pages
+					pagesCount: data.pagesCount
 				})
 			} else {
 				log.error(MESSAGES.UNABLE_TO_GET_FILMS);
@@ -101,34 +102,34 @@ filmsRouter.get(PATH.films.popular, authenticationCheck, async (req: Request, re
 	}
 })
 
-
-filmsRouter.get(PATH.films.selected, authenticationCheck, async (req: Request, res: Response) => {
-	try {
-		const user = await getCurrentUser(req) as IUser
-		console.log(user)
-		
-		if (user) {
-			console.log(req.params)
-			const id = req.params.id
-			const film = await getSelectedFilm(id) as IFilm
-			console.log(film)
-			
-			if (film) {
-				const viewedFilms = user.viewed_ids as number[]
-				const toWatchIds = user.to_watch_ids as number[]
-				console.log({ viewedFilms, toWatchIds })
-				const fullFilmInfo = await setFullFilmInfo(id, film, { viewedFilms, toWatchIds })
-				return res.json(fullFilmInfo)
-			} else {
-				return res.status(500).send(MESSAGES.ERROR_FIND_FILM)
-			}
-		} else {
-			return res.status(401)
-		}
-	} catch (error) {
-		errorHandler(error, res)
-	}
-})
+//
+// filmsRouter.get(PATH.films.selected, authenticationCheck, async (req: Request, res: Response) => {
+// 	try {
+// 		const user = await getCurrentUser(req) as IUser
+// 		console.log(user)
+//
+// 		if (user) {
+// 			console.log(req.params)
+// 			const id = req.params.id
+// 			const film = await getSelectedFilm(id) as IFilm
+// 			console.log(film)
+//
+// 			if (film) {
+// 				const viewedFilms = user.viewed_ids as number[]
+// 				const toWatchIds = user.to_watch_ids as number[]
+// 				console.log({ viewedFilms, toWatchIds })
+// 				const fullFilmInfo = await setFullFilmInfo(id, film, { viewedFilms, toWatchIds })
+// 				return res.json(fullFilmInfo)
+// 			} else {
+// 				return res.status(500).send(MESSAGES.ERROR_FIND_FILM)
+// 			}
+// 		} else {
+// 			return res.status(401)
+// 		}
+// 	} catch (error) {
+// 		errorHandler(error, res)
+// 	}
+// })
 
 
 export { filmsRouter }
