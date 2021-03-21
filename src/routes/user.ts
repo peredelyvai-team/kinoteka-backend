@@ -185,6 +185,8 @@ userRouter.put(PATH.users.films.viewed, authenticationCheck, async (req: Request
 	}
 })
 
+
+// Получение списка просмотренных фильмов
 userRouter.get(PATH.users.films.viewed, async (req: Request, res: Response) => {
 	try {
 		const userId = req.params.id
@@ -224,6 +226,99 @@ userRouter.get(PATH.users.films.viewed, async (req: Request, res: Response) => {
 	} catch (error) {
 		log.error(error);
 		log.error(MESSAGES.ERROR_GET_VIEWED_FILMS)
+		errorHandler(error, res)
+	}
+})
+
+
+
+// Изменение списка просмотренных фильмов
+userRouter.put(PATH.users.films.to_watch, authenticationCheck, async (req: Request, res: Response) => {
+	try {
+		const user = await getCurrentUser(req) as IUser
+		const userId: string = req.params.id
+		
+		if (user.user_id !== userId) {
+			return res.status(400).send(MESSAGES.ERROR_USER_ID)
+		}
+		
+		log.debug(MESSAGES.USER_RETRIEVED + user)
+		
+		if (user) {
+			const changes = req.body.changes as IUserFilmsChanges
+			if (Array.isArray(changes.added)) {
+				log.debug(MESSAGES.ADDED_IDS + changes.added);
+				log.debug(MESSAGES.REMOVED_IDS + changes.removed);
+				UserModel.findOne({ login: user.login }, (err: any, doc: any) => {
+					if (err) {
+						log.error(err)
+						return res.status(500)
+					}
+					
+					doc.to_watch_ids = Array.from(new Set([ ...doc.viewed_ids, ...changes.added ])) as number[]
+					doc.to_watch_ids = doc.to_watch_ids.filter((id: number) => {
+						return !changes.removed.includes(id);
+					})
+					
+					log.debug(MESSAGES.TO_WATCHED_FILMS + doc.to_watch_ids);
+					doc.save(() => {
+						log.debug('document saved')
+						return res.sendStatus(200)
+					})
+				})
+			}
+		} else {
+			log.error(MESSAGES.USER_NOT_FOUND);
+			return res.status(500).send(MESSAGES.USER_NOT_FOUND)
+		}
+		
+	} catch (error) {
+		log.error(error);
+		errorHandler(error, res)
+	}
+})
+
+
+// Получение списка просмотренных фильмов
+userRouter.get(PATH.users.films.to_watch, async (req: Request, res: Response) => {
+	try {
+		const userId = req.params.id
+		
+		if (userId) {
+			log.debug(MESSAGES.ATTEMPT_GET_FILMS + 'to watch')
+			log.debug(MESSAGES.USER_ID + userId)
+			
+			log.info(MESSAGES.ATTEMPT_GET_USER + userId)
+			const user: IUser = await findUserByCondition({ user_id: userId }) as IUser
+			
+			if (user) {
+				log.debug(MESSAGES.USER_RETRIEVED + user)
+				
+				const to_watch_ids: number[] = user.to_watch_ids || []
+				log.debug(MESSAGES.FILM_IDS + to_watch_ids)
+				
+				const toWatchIds = await getFilmsFromIds(to_watch_ids, user)
+				
+				if (Array.isArray(toWatchIds)) {
+					return res.status(200).json(toWatchIds)
+				} else {
+					log.error(MESSAGES.ERROR_GET_VIEWED_FILMS)
+					return res.status(500).send(MESSAGES.ERROR_GET_VIEWED_FILMS)
+				}
+				
+			} else {
+				log.error(MESSAGES.ERROR_FIND_USER)
+				return res.status(400).send(MESSAGES.ERROR_FIND_USER)
+			}
+			
+		} else {
+			log.error(MESSAGES.ERROR_USER_ID_NOT_SET)
+			return res.status(400).send(MESSAGES.ERROR_USER_ID_NOT_SET)
+		}
+		
+	} catch (error) {
+		log.error(error);
+		log.error(MESSAGES.ERROR_GET_TO_WATCH_FILMS)
 		errorHandler(error, res)
 	}
 })

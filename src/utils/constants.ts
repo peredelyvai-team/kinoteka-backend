@@ -8,7 +8,7 @@ export const PATH = {
 	users: {
 		films: {
 			viewed: '/users/:id/films/viewed',
-			to_watch: '/users/films/to_watch'
+			to_watch: '/users/:id/films/to_watch'
 		}
 	},
 	

@@ -27,5 +27,7 @@ export const MESSAGES = {
 	ERROR_USER_ID: 'Error. Please, put your current user id as parameter',
 	ORIGIN: 'Current origin: ',
 	CURRENT_NODE_ENV: 'Current node env',
-	ERROR_UNDEFINED_FILM: 'Undefined film: '
+	ERROR_UNDEFINED_FILM: 'Undefined film: ',
+	TO_WATCHED_FILMS: 'Films to watch: ',
+	ERROR_GET_TO_WATCH_FILMS: 'Unable to get films to watch'
 }
