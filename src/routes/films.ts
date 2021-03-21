@@ -111,23 +111,30 @@ filmsRouter.get(PATH.films.selected, authenticationCheck, async (req: Request, r
 		if (user) {
 			log.debug(req.params)
 			const id = parseInt(req.params.id)
-			const { data } = await getFilmById(id) as any
-			const film: IKPFilm = data
-			log.debug(film)
-
-			if (film) {
-				const viewedFilms = user.viewed_ids as number[]
-				const toWatchIds = user.to_watch_ids as number[]
-				log.debug({ viewedFilms, toWatchIds })
-				const fullFilmInfo = await setFullFilmInfo(id, film, { viewedFilms, toWatchIds })
-				return res.json(fullFilmInfo)
+			const response = await getFilmById(id) as any
+			
+			if (response) {
+				const film: IKPFilm = response.data
+				log.debug(film)
+				
+				if (film) {
+					const viewedFilms = user.viewed_ids as number[]
+					const toWatchIds = user.to_watch_ids as number[]
+					log.debug({ viewedFilms, toWatchIds })
+					const fullFilmInfo = await setFullFilmInfo(id, film, { viewedFilms, toWatchIds })
+					return res.json(fullFilmInfo)
+				} else {
+					return res.status(500).send(MESSAGES.ERROR_FIND_FILM)
+				}
 			} else {
-				return res.status(500).send(MESSAGES.ERROR_FIND_FILM)
+				log.error(MESSAGES.ERROR_UNDEFINED_FILM + id)
+				res.status(400).send(MESSAGES.ERROR_UNDEFINED_FILM + id)
 			}
 		} else {
 			return res.status(401)
 		}
 	} catch (error) {
+		log.error(error)
 		errorHandler(error, res)
 	}
 })

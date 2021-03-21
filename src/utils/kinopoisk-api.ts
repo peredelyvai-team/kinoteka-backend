@@ -37,7 +37,7 @@ export function getFilmById (id: number) {
 			})
 			resolve(response.data)
 		} catch (error) {
-			reject(error)
+			resolve(null)
 		}
 	})
 }
@@ -54,15 +54,19 @@ export function getFilmTrailer (id: number) {
 					'X-API-KEY': process.env.X_API_KEY
 				}
 			})
-			const videos = response.data
-			if (Array.isArray(videos.trailers)) {
-				const trailerPath = videos.trailers[0].url
-				resolve(trailerPath)
+			if (response) {
+				const videos = response.data
+				if (Array.isArray(videos.trailers)) {
+					const trailerPath = videos.trailers[0].url
+					resolve(trailerPath)
+				} else {
+					resolve('')
+				}
 			} else {
 				resolve('')
 			}
 		} catch (error) {
-			reject(error)
+			resolve('')
 		}
 	})
 }

@@ -8,9 +8,8 @@ import {authenticationCheck} from "~/middlewares/jwtAuth";
 import {asyncForEach, errorHandler, getCurrentUser} from "utils/helpers";
 import {IUserFilmsChanges} from "interfaces/IUserModel";
 import {log} from "utils/logger";
-import {IFilm, IFilmMinimize} from "interfaces/ITMDB";
-import {getSelectedFilm} from "utils/tmdbApi";
-import {getPosterPath} from "~/routes/films";
+import {IKPFilm, IKPFilmMinimize} from "interfaces/IKinopoisk";
+import {getFilmById} from "utils/kinopoisk-api";
 const bcrypt = require('bcrypt')
 const userRouter = express.Router()
 
@@ -32,6 +31,7 @@ async function cryptPassword (password: string) {
 export async function comparePassword (password: string, hash: string) {
 	return bcrypt.compare(password, hash)
 }
+
 // Добавление пользователя в базу данных
 async function createUser (login: string, password: string, res: Response): Promise<Response> {
 	const user: IUser = {
@@ -76,26 +76,35 @@ export async function findUserByCondition (condition: IUserCondition): Promise<I
 	})
 }
 
+
 // Получение данных о фильмах через их идентификаторы
-export async function getFilmsFromIds (ids: number[], user: IUser): Promise<IFilmMinimize[]> {
+export async function getFilmsFromIds (ids: number[], user: IUser): Promise<IKPFilmMinimize[]> {
 	return new Promise(async (resolve, reject) => {
 		try {
-			let minimizedFilms: IFilmMinimize[] = []
+			let minimizedFilms: IKPFilmMinimize[] = []
 			
 			await asyncForEach (ids, async (id) => {
-				const film = await getSelectedFilm(id) as IFilm
-				if (film) {
-					log.debug(MESSAGES.FILM + film)
-					minimizedFilms.push({
-						id: id,
-						title: film.title,
-						overview: film.overview,
-						poster_path: getPosterPath(film.poster_path),
-						viewed: user.viewed_ids?.includes(id) || false,
-						to_watched: user.to_watch_ids?.includes(id) || false
-					})
+				const response = await getFilmById(id) as any
+				
+				if (response) {
+					const film: IKPFilm = response.data
+					if (film) {
+						log.debug(MESSAGES.FILM + film)
+						minimizedFilms.push({
+							id,
+							poster_small: film.posterUrlPreview,
+							year: film.year,
+							duration: film.filmLength,
+							rating: film.rating,
+							title: film.nameRu,
+							viewed: user.viewed_ids?.includes(id) || false,
+							to_watched: user.to_watch_ids?.includes(id) || false
+						})
+					} else {
+						log.error(MESSAGES.ERROR_FILM_PARSE)
+					}
 				} else {
-					log.error(MESSAGES.ERROR_FILM_PARSE)
+					log.error(MESSAGES.ERROR_UNDEFINED_FILM + id)
 				}
 			})
 			log.debug(MESSAGES.FILMS + minimizedFilms)
@@ -131,7 +140,7 @@ userRouter.post(PATH.register, async (req: Request, res: Response) => {
 
 
 // Изменение списка просмотренных фильмов
-userRouter.put(PATH.users.films.viewed, async (req: Request, res: Response) => {
+userRouter.put(PATH.users.films.viewed, authenticationCheck, async (req: Request, res: Response) => {
 	try {
 		const user = await getCurrentUser(req) as IUser
 		const userId: string = req.params.id
