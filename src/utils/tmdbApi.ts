@@ -6,7 +6,8 @@ import {MESSAGES} from "utils/messages";
 
 const axios = require('axios').default
 
-const origin = process.env.NODE_ENV === ENV.production ? process.env.ORIGIN_PRODUCTION : process.env.ORIGIN_TEST
+// const origin = process.env.NODE_ENV === ENV.production ? process.env.ORIGIN_PRODUCTION : process.env.ORIGIN_TEST
+const origin = ""
 log.debug(MESSAGES.ORIGIN + origin)
 
 export function getPopularFilms (params: IFilmsParameters) {
