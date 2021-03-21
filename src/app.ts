@@ -8,13 +8,15 @@ import { authRouter } from './routes/authorization'
 import { filmsRouter } from './routes/films'
 import {ENV} from "utils/enums"
 import {log} from "utils/logger";
+import {MESSAGES} from "utils/messages";
 
 const cookieParser = require('cookie-parser')
 const path = require("path")
 const logger = require('morgan')
 const app = express()
 
-process.env.NODE_ENV = process.env.NODE_ENV || ENV.test
+log.debug(MESSAGES.CURRENT_NODE_ENV + process.env.NODE_ENV)
+process.env.NODE_ENV = process.env.NODE_ENV === ENV.production ? ENV.production : ENV.test
 // process.env.DEBUG = "*"
 
 

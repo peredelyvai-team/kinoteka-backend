@@ -25,5 +25,6 @@ export const MESSAGES = {
 	FILMS: 'Films: ',
 	ERROR_UPDATE_OTHER_USER: 'Error. You have no access to update data of other user',
 	ERROR_USER_ID: 'Error. Please, put your current user id as parameter',
-	ORIGIN: 'Current origin: '
+	ORIGIN: 'Current origin: ',
+	CURRENT_NODE_ENV: 'Current node env'
 }
