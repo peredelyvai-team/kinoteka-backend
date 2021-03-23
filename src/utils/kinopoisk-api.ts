@@ -1,7 +1,27 @@
 import {IFilmsParameters} from "interfaces/IFilmsParameters";
 import {HTTP_METHOD, KP_CATEGORY_TYPE, KP_SERVICE, KP_TYPE_OF_TOP, TMDB_FILM_TYPE, TMDB_SERVICE} from "utils/enums";
 import axios from "axios";
-import {IKPFilm, IKPVideos} from "interfaces/IKinopoisk";
+import {IKPFilm, IKPFilmsResponseData, IKPVideos} from "interfaces/IKinopoisk";
+
+
+export function getTopFilms (params: IFilmsParameters): Promise<IKPFilmsResponseData> {
+	return new Promise<IKPFilmsResponseData>(async (resolve, reject) => {
+		try {
+			const version = 'v2.2'
+			const url = `${process.env.KP_API_HOST}/${version}/${KP_SERVICE.films}/${KP_CATEGORY_TYPE.top}?type=${params.type}&page=${params.page}`
+			const films = await axios({
+				method: HTTP_METHOD.GET,
+				url,
+				headers: {
+					'X-API-KEY': process.env.X_API_KEY
+				}
+			})
+			resolve(films.data)
+		} catch (error) {
+			reject(error)
+		}
+	})
+}
 
 export function getPopularFilms (params: IFilmsParameters) {
 	return new Promise(async (resolve, reject) => {

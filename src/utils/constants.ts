@@ -13,6 +13,7 @@ export const PATH = {
 	},
 	
   films: {
+  	get: '/films',
     popular: '/films/popular',
     latest: '/films/latest',
     recommended: '/films/recommended',

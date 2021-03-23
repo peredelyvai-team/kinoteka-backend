@@ -21,7 +21,7 @@ export interface IKPFilm {
 
 export interface IKPFilmsResponseData {
 	pagesCount: number,
-	films: IKPFilm[]
+	films: IKPFilm[] | IKPFilmMinimize[]
 }
 
 export interface IKPFilmMinimize {

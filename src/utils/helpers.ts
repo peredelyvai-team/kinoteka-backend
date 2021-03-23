@@ -1,6 +1,7 @@
 import { Response, Request } from "express"
 import {UserModel} from "db.users/users.model"
 import {log} from "utils/logger";
+import {MESSAGES} from "utils/messages";
 const jwt = require('jsonwebtoken')
 
 export function errorHandler (error: string, res: Response, code: number = 500) {
@@ -46,5 +47,26 @@ export interface ILoopCallback {
 export async function asyncForEach (array: any[], callback: (item: any, index?: number, array?: any[]) => void) {
 	for (let i = 0; i < array.length; i++) {
 		await callback(array[i], i, array)
+	}
+}
+
+export function checkToken (req: Request) {
+	const header = req.headers.authorization
+	if (header) {
+		const token = header.split(' ')[1]
+		let isValid = false
+		jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err: any, user: any) => {
+			if (err) {
+				log.debug(MESSAGES.TOKEN_INVALID)
+				isValid = false
+			} else {
+				log.debug(user)
+				log.debug(MESSAGES.TOKEN_VALID)
+				isValid = true
+			}
+		})
+		return isValid
+	} else {
+		return false
 	}
 }

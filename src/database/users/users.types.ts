@@ -4,8 +4,8 @@ export interface IUser {
   user_id: string
   login: string
   password?: string
-  viewed_ids?: number[]
-  to_watch_ids?: number[]
+  viewed_ids: number[]
+  to_watch_ids: number[]
   friends?: string[]
 }
 

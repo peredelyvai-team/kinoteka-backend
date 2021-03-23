@@ -29,5 +29,9 @@ export const MESSAGES = {
 	CURRENT_NODE_ENV: 'Current node env',
 	ERROR_UNDEFINED_FILM: 'Undefined film: ',
 	TO_WATCHED_FILMS: 'Films to watch: ',
-	ERROR_GET_TO_WATCH_FILMS: 'Unable to get films to watch'
+	ERROR_GET_TO_WATCH_FILMS: 'Unable to get films to watch',
+	TOKEN_INVALID: 'Token invalid',
+	TOKEN_VALID: 'Token valid',
+	USER_AUTHORIZED: 'User authorized: ',
+	ERROR_UNDEFINED_FILM_TYPE: 'Undefined film type'
 }

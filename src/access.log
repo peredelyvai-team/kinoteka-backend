@@ -1,8 +1,3 @@
-[0mPUT /users/3d071f3d-809e-4e48-ae13-201ceca31b27/films/to_watch [33m403 [0m43.765 ms - 9[0m
-[0mPUT /users/3d071f3d-809e-4e48-ae13-201ceca31b27/films/to_watch [33m403 [0m6.747 ms - 9[0m
-[0mPOST /login [32m200 [0m253.178 ms - 456[0m
-[0mGET /users/3d071f3d-809e-4e48-ae13-201ceca31b27/films/viewed [32m200 [0m1266.710 ms - 410[0m
-[0mGET /users/3d071f3d-809e-4e48-ae13-201ceca31b27/films/to_watch [32m200 [0m87.754 ms - 2[0m
-[0mPUT /users/3d071f3d-809e-4e48-ae13-201ceca31b27/films/to_watch [33m403 [0m14.649 ms - 9[0m
-[0mPUT /users/3d071f3d-809e-4e48-ae13-201ceca31b27/films/to_watch [32m200 [0m286.856 ms - 2[0m
-[0mGET /users/3d071f3d-809e-4e48-ae13-201ceca31b27/films/to_watch [32m200 [0m1240.040 ms - 408[0m
+[0mGET /films?page=1&type=TOP_250_BEST_FILMS [32m200 [0m359.630 ms - 4418[0m
+[0mGET /films?page=1&type=TOP_AWAIT_FILMS [32m200 [0m218.582 ms - 4445[0m
+[0mGET /films?page=1&type=TOP_100_POPULAR_FILMS [32m200 [0m253.188 ms - 4604[0m

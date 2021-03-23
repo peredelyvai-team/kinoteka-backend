@@ -1,14 +1,14 @@
-import express, { Request, Response } from "express"
-import { PATH } from "~/utils/constants"
-import uuid from 'uuid-random'
-import {UserModel} from "db.users/users.model"
-import {IUser, IUserCondition, IUserFilms} from "db.users/users.types"
+import express, {Request, Response} from "express"
+import {PATH} from "~/utils/constants"
+import {IUser, IUserFilms} from "db.users/users.types"
 import {MESSAGES} from "utils/messages";
 import {authenticationCheck} from "~/middlewares/jwtAuth";
-import {errorHandler, getCurrentUser, getTokenFromRequest} from "utils/helpers";
+import {checkToken, errorHandler, getCurrentUser} from "utils/helpers";
 import {log} from "utils/logger";
 import {IKPFilm, IKPFilmFullData, IKPFilmMinimize, IKPFilmsResponseData} from "interfaces/IKinopoisk";
-import {getPopularFilms, getFilmById, getFilmTrailer} from "utils/kinopoisk-api";
+import {getFilmById, getFilmTrailer, getPopularFilms, getTopFilms} from "utils/kinopoisk-api";
+import {KP_TYPE_OF_TOP} from "utils/enums";
+
 const filmsRouter = express.Router()
 
 export function getPosterPath (poster_path: string): string {
@@ -23,8 +23,8 @@ function getFilmGenres (genres: { id: number, name: string }[] = []): string[] {
 	return genres.map(genre => genre.name)
 }
 
-function parseUserFilmsArray (data: IKPFilmsResponseData, userFilms: IUserFilms ): Array<IKPFilmMinimize> {
-	return data.films.map(el => {
+function parseFilmsArray (films: IKPFilm[], userFilms: IUserFilms ): Array<IKPFilmMinimize> {
+	return films.map(el => {
 		return {
 			id: el.filmId,
 			title: el.nameRu,
@@ -64,43 +64,116 @@ function setFullFilmInfo (id: number, film: IKPFilm, userFilms: IUserFilms): Pro
 	})
 }
 
-
-// Получение популярных фильмов
-filmsRouter.get(PATH.films.popular, authenticationCheck, async (req: Request, res: Response) => {
-	try {
-		const user = await getCurrentUser(req) as IUser
-		log.debug(user)
-		
-		if (user) {
-			
+async function getFilms (req: Request, viewed_ids: number[], to_watch_ids: number[]): Promise<IKPFilmsResponseData> {
+	return new Promise(async (resolve, reject) => {
+		try {
 			const page: string = req.query.page?.toString() || '1'
-			log.info(MESSAGES.ATTEMPT_GET_FILMS + 'popular')
-			const popularFilms: any = await getPopularFilms({ page: parseInt(page) })
-			const data: IKPFilmsResponseData = popularFilms.data
+			const type: KP_TYPE_OF_TOP = req.query.type?.toString() as KP_TYPE_OF_TOP || KP_TYPE_OF_TOP.TOP_100_POPULAR_FILMS
 			
-			const viewedFilms = user.viewed_ids as number[]
-			const toWatchIds = user.to_watch_ids as number[]
-			log.debug({ viewedFilms, toWatchIds })
-			const parsedFilms = parseUserFilmsArray(data, { viewedFilms, toWatchIds })
-			log.debug(parsedFilms)
-			if (parsedFilms) {
-				return res.json({
-					popularFilms: parsedFilms,
-					pagesCount: data.pagesCount
-				})
+			if (Object.values(KP_TYPE_OF_TOP).includes(type)) {
+				log.info(MESSAGES.ATTEMPT_GET_FILMS + type)
+				const data: IKPFilmsResponseData = await getTopFilms({ page: parseInt(page), type })
+				
+				const viewedFilms = viewed_ids as number[]
+				const toWatchIds = to_watch_ids as number[]
+				log.debug({ viewedFilms, toWatchIds })
+				
+				const filmsMinimized: IKPFilmMinimize[] = parseFilmsArray(data.films as IKPFilm[], { viewedFilms, toWatchIds })
+				resolve({ films: filmsMinimized, pagesCount: data.pagesCount })
 			} else {
-				log.error(MESSAGES.UNABLE_TO_GET_FILMS);
-				return res.status(500).send(MESSAGES.UNABLE_TO_GET_FILMS)
+				reject(MESSAGES.ERROR_UNDEFINED_FILM_TYPE)
 			}
+		} catch (error) {
+			reject(error)
+		}
+	})
+}
+
+
+async function getAuthUserFilms (req: Request): Promise<IKPFilmsResponseData> {
+	return new Promise<IKPFilmsResponseData>(async (resolve, reject) => {
+		try {
+			const user = await getCurrentUser(req) as IUser
+			log.debug(user)
+			let data: IKPFilmsResponseData
+			if (user) {
+				data = await getFilms(req, user.viewed_ids, user.to_watch_ids)
+			} else {
+				data = await getFilms(req, [], [])
+			}
+			resolve({ films: data.films, pagesCount: data.pagesCount })
+		} catch (error) {
+			log.error(error)
+			reject(error)
+		}
+	})
+}
+
+
+// Получение списка фильмов по параметру
+filmsRouter.get(PATH.films.get, async (req: Request, res: Response) => {
+	try {
+		const isAuthorized: boolean = checkToken(req) || false
+		
+		log.debug(MESSAGES.USER_AUTHORIZED + isAuthorized)
+		let filmsData: IKPFilmsResponseData
+		if (isAuthorized) {
+			filmsData = await getAuthUserFilms(req)
 		} else {
-			log.error(MESSAGES.BAD_AUTH_PARAMETERS)
-			return res.status(401)
+			filmsData = await getFilms(req, [], [])
+		}
+		if (filmsData) {
+			return res.json({
+				popularFilms: filmsData.films,
+				pagesCount: filmsData.pagesCount
+			})
+		} else {
+			log.error(MESSAGES.UNABLE_TO_GET_FILMS);
+			return res.status(500).send(MESSAGES.UNABLE_TO_GET_FILMS)
 		}
 	} catch (error) {
 		log.error(error)
 		errorHandler(error, res)
 	}
 })
+
+
+// // Получение популярных фильмов
+// filmsRouter.get(PATH.films.popular, authenticationCheck, async (req: Request, res: Response) => {
+// 	try {
+// 		const user = await getCurrentUser(req) as IUser
+// 		log.debug(user)
+//
+// 		if (user) {
+//
+// 			const page: string = req.query.page?.toString() || '1'
+// 			log.info(MESSAGES.ATTEMPT_GET_FILMS + 'popular')
+// 			const popularFilms: any = await getPopularFilms({ page: parseInt(page) })
+// 			const data: IKPFilmsResponseData = popularFilms.data
+//
+// 			const viewedFilms = user.viewed_ids as number[]
+// 			const toWatchIds = user.to_watch_ids as number[]
+// 			log.debug({ viewedFilms, toWatchIds })
+// 			const parsedFilms = parseUserFilmsArray(data, { viewedFilms, toWatchIds })
+// 			log.debug(parsedFilms)
+// 			if (parsedFilms) {
+// 				return res.json({
+// 					popularFilms: parsedFilms,
+// 					pagesCount: data.pagesCount
+// 				})
+// 			} else {
+// 				log.error(MESSAGES.UNABLE_TO_GET_FILMS);
+// 				return res.status(500).send(MESSAGES.UNABLE_TO_GET_FILMS)
+// 			}
+// 		} else {
+// 			log.error(MESSAGES.BAD_AUTH_PARAMETERS)
+// 			return res.status(401)
+// 		}
+// 	} catch (error) {
+// 		log.error(error)
+// 		errorHandler(error, res)
+// 	}
+// })
 
 // Получение фильма по идентификатору
 filmsRouter.get(PATH.films.selected, authenticationCheck, async (req: Request, res: Response) => {
