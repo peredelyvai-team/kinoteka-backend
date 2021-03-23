@@ -5,8 +5,14 @@ import {MESSAGES} from "utils/messages";
 import {authenticationCheck} from "~/middlewares/jwtAuth";
 import {checkToken, errorHandler, getCurrentUser} from "utils/helpers";
 import {log} from "utils/logger";
-import {IKPFilm, IKPFilmFullData, IKPFilmMinimize, IKPFilmsResponseData} from "interfaces/IKinopoisk";
-import {getFilmById, getFilmTrailer, getTopFilms, searchFilmsByKeyword} from "utils/kinopoisk-api";
+import {IKPFilm, IKPFilmFullData, IKPFilmMinimize, IKPFilmsResponseData, IKPStaff} from "interfaces/IKinopoisk";
+import {
+	getFilmBackdrop,
+	getFilmById, getFilmStaff,
+	getFilmTrailer,
+	getTopFilms,
+	searchFilmsByKeyword
+} from "utils/kinopoisk-api";
 import {KP_TYPE_OF_TOP} from "utils/enums";
 
 const filmsRouter = express.Router()
@@ -48,6 +54,11 @@ function setFullFilmInfo (id: number, film: IKPFilm, userFilms: IUserFilms): Pro
 				overview: film.description as string,
 				poster_small: film.posterUrlPreview,
 				poster_big: film.posterUrl,
+				
+				backdrop: await getFilmBackdrop(id),
+				slogan: film.slogan,
+				staff: await getFilmStaff(id),
+				
 				viewed: userFilms.viewedFilms.includes(film.filmId) as boolean,
 				to_watched: userFilms.toWatchIds.includes(film.filmId),
 				

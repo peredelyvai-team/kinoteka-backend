@@ -1,7 +1,22 @@
 import {IFilmsParameters} from "interfaces/IFilmsParameters";
-import {HTTP_METHOD, KP_CATEGORY_TYPE, KP_SERVICE, KP_TYPE_OF_TOP, TMDB_FILM_TYPE, TMDB_SERVICE} from "utils/enums";
+import {
+	HTTP_METHOD,
+	KP_CATEGORY_TYPE,
+	KP_SERVICE,
+	KP_STAFF_KEY,
+	KP_TYPE_OF_TOP,
+	TMDB_FILM_TYPE,
+	TMDB_SERVICE
+} from "utils/enums";
 import axios from "axios";
-import {IKPFilm, IKPFilmsResponseData, IKPSearchResult, IKPVideos} from "interfaces/IKinopoisk";
+import {
+	IKPFilm,
+	IKPFilmsResponseData,
+	IKPSearchResult,
+	IKPStaff,
+	IKPStaffFullData,
+	IKPVideos
+} from "interfaces/IKinopoisk";
 import {log} from "utils/logger";
 
 
@@ -111,6 +126,70 @@ export function searchFilmsByKeyword (keyword: string, page: number): Promise<IK
 			resolve(data)
 		} catch (error) {
 			reject(error)
+		}
+	})
+}
+
+export function getFilmBackdrop (id: number): Promise<string> {
+	return new Promise<string>(async (resolve) => {
+		try {
+			const version = 'v2.1'
+			const url = `${process.env.KP_API_HOST}/${version}/${KP_SERVICE.films}/${id}/frames`
+			log.debug(url)
+			const { data } = await axios({
+				method: HTTP_METHOD.GET,
+				url,
+				headers: {
+					'X-API-KEY': process.env.X_API_KEY
+				}
+			})
+			const images: { image: string, preview: string }[] = data.frames
+			
+			if (images?.length) {
+				resolve(images[0].image)
+			} else {
+				resolve('')
+			}
+			
+		} catch (error) {
+			log.error(error)
+			resolve('')
+		}
+	})
+}
+
+export function getFilmStaff (id: number): Promise<IKPStaff[]> {
+	return new Promise<IKPStaff[]>(async (resolve) => {
+		try {
+			const version = 'v1'
+			const url = `${process.env.KP_API_HOST}/${version}/${KP_SERVICE.staff}?filmId=${id}`
+			log.debug(url)
+			const { data } = await axios({
+				method: HTTP_METHOD.GET,
+				url,
+				headers: {
+					'X-API-KEY': process.env.X_API_KEY
+				}
+			})
+			const totalStaff: IKPStaffFullData[] = data
+			
+			const types = Object.values(KP_STAFF_KEY)
+			const staff: IKPStaff[] = []
+			
+			totalStaff.forEach(el => {
+				if (types.includes(el.professionKey as KP_STAFF_KEY)) {
+					staff.push({
+						name: el.nameRu,
+						description: el.description,
+						posterUrl: el.posterUrl,
+						profession: el.professionText
+					} as IKPStaff)
+				}
+			})
+			resolve(staff)
+		} catch (error) {
+			log.error(error)
+			resolve([] as IKPStaff[])
 		}
 	})
 }

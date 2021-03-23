@@ -24,9 +24,27 @@ export interface IKPFilm {
 	posterUrlPreview: string,
 	ratingChange?: any,
 	description?: string,
-	premiereWorld?: string
+	premiereWorld?: string,
+	slogan: string
 }
 
+
+export interface IKPStaff {
+	name: string,
+	description: string,
+	posterUrl: string,
+	profession: string
+}
+
+export interface IKPStaffFullData {
+	staffId: number,
+	nameRu: string,
+	nameEn: string,
+	description: string,
+	posterUrl: string,
+	professionText: string,
+	professionKey: string
+}
 
 export interface IKPFilmsResponseData {
 	pagesCount: number,
@@ -57,7 +75,11 @@ export interface IKPFilmFullData {
 	runtime: string,
 	trailer_path: string,
 	facts: string[],
-	rating: string
+	rating: string,
+	
+	staff: IKPStaff[],
+	slogan: string,
+	backdrop: string
 }
 
 export interface IKPVideo {

@@ -29,7 +29,14 @@ export enum ENV {
 }
 
 export enum KP_SERVICE {
-	films = 'films'
+	films = 'films',
+	staff = 'staff'
+}
+
+export enum KP_STAFF_KEY {
+	DIRECTOR = 'DIRECTOR',
+	WRITER = 'WRITER',
+	PRODUCER = 'PRODUCER'
 }
 
 export enum KP_CATEGORY_TYPE {
