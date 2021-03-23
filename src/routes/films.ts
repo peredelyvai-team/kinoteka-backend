@@ -6,7 +6,7 @@ import {authenticationCheck} from "~/middlewares/jwtAuth";
 import {checkToken, errorHandler, getCurrentUser} from "utils/helpers";
 import {log} from "utils/logger";
 import {IKPFilm, IKPFilmFullData, IKPFilmMinimize, IKPFilmsResponseData} from "interfaces/IKinopoisk";
-import {getFilmById, getFilmTrailer, getPopularFilms, getTopFilms} from "utils/kinopoisk-api";
+import {getFilmById, getFilmTrailer, getTopFilms, searchFilmsByKeyword} from "utils/kinopoisk-api";
 import {KP_TYPE_OF_TOP} from "utils/enums";
 
 const filmsRouter = express.Router()
@@ -204,6 +204,50 @@ filmsRouter.get(PATH.films.selected, async (req: Request, res: Response) => {
 	} catch (error) {
 		log.error(error)
 		errorHandler(error, res)
+	}
+})
+
+// Получение фильмов по ключевым словам
+filmsRouter.post(PATH.films.search, async (req: Request, res: Response) => {
+	try {
+		const keyword: string = encodeURI(req.body.keyword?.toString().trim()) || ''
+		const page: number = parseInt(req.body.page as string) || 1
+		
+		log.debug({ keyword, page })
+		
+		if (keyword?.length >= 3) {
+			const isAuthorized: boolean = checkToken(req) || false
+			log.debug(MESSAGES.USER_AUTHORIZED + isAuthorized)
+			
+			let filmsMinimized: IKPFilmMinimize[] = []
+			const data = await searchFilmsByKeyword(keyword, page)
+			
+			if (isAuthorized) {
+				const user = await getCurrentUser(req) as IUser
+				log.debug(user)
+				
+				if (user) {
+					filmsMinimized = parseFilmsArray(data.films, { viewedFilms: user.viewed_ids, toWatchIds: user.to_watch_ids })
+				} else {
+					return res.status(400).send(MESSAGES.ERROR_USER_NOT_FOUND)
+				}
+			} else {
+				filmsMinimized = parseFilmsArray(data.films, { viewedFilms: [], toWatchIds: [] })
+			}
+		
+			return res.json({
+				films: filmsMinimized,
+				totalCount: data.searchFilmsCountResult,
+				pagesCount: data.pagesCount,
+				keyword: data.keyword
+			})
+		} else {
+			return res.status(400).send(MESSAGES.ERROR_KEYWORD)
+		}
+		
+	} catch (error) {
+		log.error(error)
+		return res.status(400).send(MESSAGES.ERROR_FIND_FILMS)
 	}
 })
 

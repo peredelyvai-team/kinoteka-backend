@@ -17,7 +17,8 @@ export const PATH = {
     popular: '/films/popular',
     latest: '/films/latest',
     recommended: '/films/recommended',
-	  selected: '/films/:id'
+	  selected: '/films/:id',
+	  search: '/films/search'
   }
 }
 

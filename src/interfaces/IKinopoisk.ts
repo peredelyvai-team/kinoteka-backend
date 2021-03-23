@@ -2,6 +2,13 @@ import {KP_VIDEO} from "utils/enums";
 import {getFilmTrailer} from "utils/kinopoisk-api";
 
 
+export interface IKPSearchResult {
+	keyword: string,
+	pagesCount: number,
+	searchFilmsCountResult: number,
+	films: IKPFilm[]
+}
+
 export interface IKPFilm {
 	filmId: number,
 	nameRu: string,

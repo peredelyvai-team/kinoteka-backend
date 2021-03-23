@@ -1,7 +1,7 @@
 import {IFilmsParameters} from "interfaces/IFilmsParameters";
 import {HTTP_METHOD, KP_CATEGORY_TYPE, KP_SERVICE, KP_TYPE_OF_TOP, TMDB_FILM_TYPE, TMDB_SERVICE} from "utils/enums";
 import axios from "axios";
-import {IKPFilm, IKPFilmsResponseData, IKPVideos} from "interfaces/IKinopoisk";
+import {IKPFilm, IKPFilmsResponseData, IKPSearchResult, IKPVideos} from "interfaces/IKinopoisk";
 import {log} from "utils/logger";
 
 
@@ -91,6 +91,26 @@ export function getFilmTrailer (id: number) {
 			}
 		} catch (error) {
 			resolve('')
+		}
+	})
+}
+
+export function searchFilmsByKeyword (keyword: string, page: number): Promise<IKPSearchResult> {
+	return new Promise<IKPSearchResult>(async (resolve, reject) => {
+		try {
+			const version = 'v2.1'
+			const url = `${process.env.KP_API_HOST}/${version}/${KP_SERVICE.films}/search-by-keyword?keyword=${keyword}&page=${page}`
+			log.debug(url)
+			const { data } = await axios({
+				method: HTTP_METHOD.GET,
+				url,
+				headers: {
+					'X-API-KEY': process.env.X_API_KEY
+				}
+			})
+			resolve(data)
+		} catch (error) {
+			reject(error)
 		}
 	})
 }

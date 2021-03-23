@@ -34,5 +34,7 @@ export const MESSAGES = {
 	TOKEN_VALID: 'Token valid',
 	USER_AUTHORIZED: 'User authorized: ',
 	ERROR_UNDEFINED_FILM_TYPE: 'Undefined film type',
-	ERROR_USER_NOT_FOUND: 'User not found'
+	ERROR_USER_NOT_FOUND: 'User not found',
+	ERROR_FIND_FILMS: 'Unable to find films by keyword',
+	ERROR_KEYWORD: 'Wrong format of keyword. Must be a string with 3 or more characters'
 }
