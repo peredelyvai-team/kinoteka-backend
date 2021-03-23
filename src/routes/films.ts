@@ -127,7 +127,7 @@ filmsRouter.get(PATH.films.get, async (req: Request, res: Response) => {
 		}
 		if (filmsData) {
 			return res.json({
-				popularFilms: filmsData.films,
+				films: filmsData.films,
 				pagesCount: filmsData.pagesCount
 			})
 		} else {

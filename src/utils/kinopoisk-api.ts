@@ -59,7 +59,6 @@ export function getFilmById (id: number) {
 			const fullData = response.data
 			const data = fullData.data
 			data.rating = fullData.rating.rating
-			log.debug(data)
 			resolve(data)
 		} catch (error) {
 			resolve(null)
