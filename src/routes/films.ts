@@ -33,7 +33,7 @@ function parseFilmsArray (films: IKPFilm[], userFilms: IUserFilms ): Array<IKPFi
 			to_watched: userFilms.toWatchIds.includes(el.filmId),
 			year: el.year,
 			duration: el.filmLength,
-			rating: el.rating
+			rating: el.rating as string
 		}
 	})
 }
@@ -54,7 +54,10 @@ function setFullFilmInfo (id: number, film: IKPFilm, userFilms: IUserFilms): Pro
 				release_date: film.premiereWorld as string,
 				genres: film.genres?.map(el => el.genre),
 				runtime: film.filmLength,
-				trailer_path: await getFilmTrailer(id) as string
+				trailer_path: await getFilmTrailer(id) as string,
+				
+				rating: film.rating,
+				facts: film.facts
 			}
 			resolve(filmData)
 		} catch (error) {
@@ -137,75 +140,67 @@ filmsRouter.get(PATH.films.get, async (req: Request, res: Response) => {
 	}
 })
 
-
-// // Получение популярных фильмов
-// filmsRouter.get(PATH.films.popular, authenticationCheck, async (req: Request, res: Response) => {
-// 	try {
-// 		const user = await getCurrentUser(req) as IUser
-// 		log.debug(user)
-//
-// 		if (user) {
-//
-// 			const page: string = req.query.page?.toString() || '1'
-// 			log.info(MESSAGES.ATTEMPT_GET_FILMS + 'popular')
-// 			const popularFilms: any = await getPopularFilms({ page: parseInt(page) })
-// 			const data: IKPFilmsResponseData = popularFilms.data
-//
-// 			const viewedFilms = user.viewed_ids as number[]
-// 			const toWatchIds = user.to_watch_ids as number[]
-// 			log.debug({ viewedFilms, toWatchIds })
-// 			const parsedFilms = parseUserFilmsArray(data, { viewedFilms, toWatchIds })
-// 			log.debug(parsedFilms)
-// 			if (parsedFilms) {
-// 				return res.json({
-// 					popularFilms: parsedFilms,
-// 					pagesCount: data.pagesCount
-// 				})
-// 			} else {
-// 				log.error(MESSAGES.UNABLE_TO_GET_FILMS);
-// 				return res.status(500).send(MESSAGES.UNABLE_TO_GET_FILMS)
-// 			}
-// 		} else {
-// 			log.error(MESSAGES.BAD_AUTH_PARAMETERS)
-// 			return res.status(401)
-// 		}
-// 	} catch (error) {
-// 		log.error(error)
-// 		errorHandler(error, res)
-// 	}
-// })
-
-// Получение фильма по идентификатору
-filmsRouter.get(PATH.films.selected, authenticationCheck, async (req: Request, res: Response) => {
-	try {
-		const user = await getCurrentUser(req) as IUser
-		log.debug(user)
-
-		if (user) {
+async function getSingleFilm (req: Request, viewed_ids: number[], to_watch_ids: number[]): Promise<IKPFilmFullData> {
+	return new Promise<IKPFilmFullData>(async (resolve, reject) => {
+		try {
 			log.debug(req.params)
 			const id = parseInt(req.params.id)
-			const response = await getFilmById(id) as any
-			
-			if (response) {
-				const film: IKPFilm = response.data
+			const data = await getFilmById(id) as any
+			if (data) {
+				const film: IKPFilm = data
 				log.debug(film)
-				
 				if (film) {
-					const viewedFilms = user.viewed_ids as number[]
-					const toWatchIds = user.to_watch_ids as number[]
+					const viewedFilms = viewed_ids as number[]
+					const toWatchIds = to_watch_ids as number[]
 					log.debug({ viewedFilms, toWatchIds })
-					const fullFilmInfo = await setFullFilmInfo(id, film, { viewedFilms, toWatchIds })
-					return res.json(fullFilmInfo)
+					const fullFilmInfo: IKPFilmFullData = await setFullFilmInfo(id, film, { viewedFilms, toWatchIds })
+					resolve(fullFilmInfo)
 				} else {
-					return res.status(500).send(MESSAGES.ERROR_FIND_FILM)
+					reject(MESSAGES.ERROR_UNDEFINED_FILM + id)
 				}
 			} else {
 				log.error(MESSAGES.ERROR_UNDEFINED_FILM + id)
-				res.status(400).send(MESSAGES.ERROR_UNDEFINED_FILM + id)
+				reject(MESSAGES.ERROR_UNDEFINED_FILM + id)
 			}
-		} else {
-			return res.status(401)
+		} catch (error) {
+			log.error(error)
+			reject(error)
 		}
+	})
+}
+
+function getAuthUserSingleFilm (req: Request): Promise<IKPFilmFullData> {
+	return new Promise<IKPFilmFullData>(async (resolve, reject) => {
+		try {
+			const user = await getCurrentUser(req) as IUser
+			log.debug(user)
+			let film: IKPFilmFullData
+
+			if (user) {
+				film = await getSingleFilm(req, user.viewed_ids, user.to_watch_ids)
+			} else {
+				film = await getSingleFilm(req, [], [])
+			}
+			resolve(film)
+		} catch (error) {
+			log.error(error)
+			reject(MESSAGES.ERROR_FIND_FILM)
+		}
+	})
+}
+
+// Получение фильма по идентификатору
+filmsRouter.get(PATH.films.selected, async (req: Request, res: Response) => {
+	try {
+		const isAuthorized: boolean = checkToken(req) || false
+		log.debug(MESSAGES.USER_AUTHORIZED + isAuthorized)
+		let filmsData: IKPFilmFullData
+		if (isAuthorized) {
+			filmsData = await getAuthUserSingleFilm(req)
+		} else {
+			filmsData = await getSingleFilm(req, [], [])
+		}
+		res.json(filmsData)
 	} catch (error) {
 		log.error(error)
 		errorHandler(error, res)

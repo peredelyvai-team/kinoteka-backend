@@ -33,5 +33,6 @@ export const MESSAGES = {
 	TOKEN_INVALID: 'Token invalid',
 	TOKEN_VALID: 'Token valid',
 	USER_AUTHORIZED: 'User authorized: ',
-	ERROR_UNDEFINED_FILM_TYPE: 'Undefined film type'
+	ERROR_UNDEFINED_FILM_TYPE: 'Undefined film type',
+	ERROR_USER_NOT_FOUND: 'User not found'
 }

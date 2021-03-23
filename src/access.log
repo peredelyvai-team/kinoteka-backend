@@ -1,3 +1,1 @@
-[0mGET /films?page=1&type=TOP_250_BEST_FILMS [32m200 [0m359.630 ms - 4418[0m
-[0mGET /films?page=1&type=TOP_AWAIT_FILMS [32m200 [0m218.582 ms - 4445[0m
-[0mGET /films?page=1&type=TOP_100_POPULAR_FILMS [32m200 [0m253.188 ms - 4604[0m
+[0mGET /films/1387021 [32m200 [0m797.888 ms - 3102[0m

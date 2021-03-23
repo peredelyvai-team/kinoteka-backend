@@ -2,6 +2,7 @@ import {IFilmsParameters} from "interfaces/IFilmsParameters";
 import {HTTP_METHOD, KP_CATEGORY_TYPE, KP_SERVICE, KP_TYPE_OF_TOP, TMDB_FILM_TYPE, TMDB_SERVICE} from "utils/enums";
 import axios from "axios";
 import {IKPFilm, IKPFilmsResponseData, IKPVideos} from "interfaces/IKinopoisk";
+import {log} from "utils/logger";
 
 
 export function getTopFilms (params: IFilmsParameters): Promise<IKPFilmsResponseData> {
@@ -55,7 +56,11 @@ export function getFilmById (id: number) {
 					'X-API-KEY': process.env.X_API_KEY
 				}
 			})
-			resolve(response.data)
+			const fullData = response.data
+			const data = fullData.data
+			data.rating = fullData.rating.rating
+			log.debug(data)
+			resolve(data)
 		} catch (error) {
 			resolve(null)
 		}

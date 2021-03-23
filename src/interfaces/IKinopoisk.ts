@@ -1,6 +1,7 @@
 import {KP_VIDEO} from "utils/enums";
 import {getFilmTrailer} from "utils/kinopoisk-api";
 
+
 export interface IKPFilm {
 	filmId: number,
 	nameRu: string,
@@ -10,6 +11,7 @@ export interface IKPFilm {
 	countries: { country: string }[],
 	genres: { genre: string }[],
 	rating: string,
+	facts: string[],
 	ratingVoteCount?: number,
 	posterUrl: string,
 	posterUrlPreview: string,
@@ -46,7 +48,9 @@ export interface IKPFilmFullData {
 	release_date: string,
 	genres: string[],
 	runtime: string,
-	trailer_path: string
+	trailer_path: string,
+	facts: string[],
+	rating: string
 }
 
 export interface IKPVideo {
