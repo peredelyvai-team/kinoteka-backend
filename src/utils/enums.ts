@@ -45,7 +45,8 @@ export enum KP_VIDEO_SITE {
 }
 
 export enum KP_CATEGORY_TYPE {
-	top = 'top'
+	top = 'top',
+	film = 'FILM'
 }
 
 export enum KP_TYPE_OF_TOP {

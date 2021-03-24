@@ -1,7 +1,6 @@
-import {IFilmsParameters} from "interfaces/IFilmsParameters";
 import {HTTP_METHOD, KP_CATEGORY_TYPE, KP_SERVICE, KP_STAFF_KEY, KP_TYPE_OF_TOP, KP_VIDEO_SITE} from "utils/enums";
 import axios from "axios";
-import {IKPFilmsResponseData, IKPSearchResult, IKPStaff, IKPStaffFullData} from "interfaces/IKinopoisk";
+import {IKPFilmsResponseData, IKPSearchResult, IKPStaff, IKPStaffFullData, IFilmsParameters, IKPFilterParams, IKPFilters} from "interfaces/IKinopoisk";
 import {log} from "utils/logger";
 
 
@@ -175,6 +174,47 @@ export function getFilmStaff (id: number): Promise<IKPStaff[]> {
 		} catch (error) {
 			log.error(error)
 			resolve([] as IKPStaff[])
+		}
+	})
+}
+
+
+export function getFilters (): Promise<IKPFilters> {
+	return new Promise<IKPFilters>(async (resolve, reject) => {
+		try {
+			const version = 'v2.1'
+			const url = `${process.env.KP_API_HOST}/${version}/${KP_SERVICE.films}/filters`
+			log.debug(url)
+			const { data } = await axios({
+				method: HTTP_METHOD.GET,
+				url,
+				headers: {
+					'X-API-KEY': process.env.X_API_KEY
+				}
+			})
+			resolve(data)
+		} catch (error) {
+			reject(error)
+		}
+	})
+}
+
+export function searchByFilters (query: string): Promise<IKPFilmsResponseData> {
+	return new Promise<IKPFilmsResponseData>(async (resolve, reject) => {
+		try {
+			const version = 'v2.1'
+			const url = `${process.env.KP_API_HOST}/${version}/${KP_SERVICE.films}/search-by-filters?${query}&type=${KP_CATEGORY_TYPE.film}`
+			log.debug(url)
+			const { data } = await axios({
+				method: HTTP_METHOD.GET,
+				url,
+				headers: {
+					'X-API-KEY': process.env.X_API_KEY
+				}
+			})
+			resolve(data as IKPFilmsResponseData)
+		} catch (error) {
+			reject(error)
 		}
 	})
 }

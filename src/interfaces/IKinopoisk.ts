@@ -1,4 +1,4 @@
-import {KP_VIDEO} from "utils/enums";
+import {KP_TYPE_OF_TOP, KP_VIDEO} from "utils/enums";
 import {getFilmTrailer} from "utils/kinopoisk-api";
 
 
@@ -93,4 +93,19 @@ export interface IKPVideo {
 export interface IKPVideos {
 	trailers: IKPVideo[],
 	teasers: IKPVideo[]
+}
+
+export interface IFilmsParameters {
+	page: number,
+	type: KP_TYPE_OF_TOP
+}
+
+export interface IKPFilterParams {
+	country: string,
+	genre: string,
+}
+
+export interface IKPFilters {
+	genres: { id: number, genre: string }[],
+	countries: { id: number, country: string }[]
 }

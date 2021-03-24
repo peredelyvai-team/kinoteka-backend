@@ -2,32 +2,21 @@ import express, {Request, Response} from "express"
 import {PATH} from "~/utils/constants"
 import {IUser, IUserFilms} from "db.users/users.types"
 import {MESSAGES} from "utils/messages";
-import {authenticationCheck} from "~/middlewares/jwtAuth";
 import {checkToken, errorHandler, getCurrentUser} from "utils/helpers";
 import {log} from "utils/logger";
-import {IKPFilm, IKPFilmFullData, IKPFilmMinimize, IKPFilmsResponseData, IKPStaff} from "interfaces/IKinopoisk";
+import {IKPFilm, IKPFilmFullData, IKPFilmMinimize, IKPFilmsResponseData} from "interfaces/IKinopoisk";
 import {
 	getFilmBackdrop,
 	getFilmById, getFilmStaff,
-	getFilmTrailer,
-	getTopFilms,
+	getFilmTrailer, getFilters,
+	getTopFilms, searchByFilters,
 	searchFilmsByKeyword
 } from "utils/kinopoisk-api";
 import {KP_TYPE_OF_TOP} from "utils/enums";
+import {userRouter} from "~/routes/user";
 
 const filmsRouter = express.Router()
 
-export function getPosterPath (poster_path: string): string {
-	return `${process.env.TMBD_COVER_URL}${poster_path}`
-}
-
-function getBackdropPath (backdrop_path: string): string {
-	return `${process.env.TMBD_BACKDROP_URL}${backdrop_path}`
-}
-
-function getFilmGenres (genres: { id: number, name: string }[] = []): string[] {
-	return genres.map(genre => genre.name)
-}
 
 function parseFilmsArray (films: IKPFilm[], userFilms: IUserFilms ): Array<IKPFilmMinimize> {
 	return films.map(el => {
@@ -259,6 +248,49 @@ filmsRouter.post(PATH.films.search, async (req: Request, res: Response) => {
 	} catch (error) {
 		log.error(error)
 		return res.status(400).send(MESSAGES.ERROR_FIND_FILMS)
+	}
+})
+
+userRouter.get(PATH.films.filters, async (req: Request, res: Response) => {
+	try {
+		const data = await getFilters()
+		return res.json(data)
+	} catch (error) {
+		log.error(error)
+		return res.status(500).send(MESSAGES.ERROR_GET_FILTERS)
+	}
+})
+
+userRouter.get(PATH.films.searchByFilters, async (req: Request, res: Response) => {
+	try {
+		const query: string = req.originalUrl.slice(req.originalUrl.indexOf('?') + 1)
+		log.debug(query)
+		
+		const data = await searchByFilters(query) as IKPFilmsResponseData
+		
+		const isAuthorized: boolean = checkToken(req) || false
+		log.debug(MESSAGES.USER_AUTHORIZED + isAuthorized)
+		let films: IKPFilmMinimize[]
+		if (isAuthorized) {
+			
+			const user = await getCurrentUser(req) as IUser
+			
+			if (user) {
+				films = parseFilmsArray(data.films as IKPFilm[], { viewedFilms: user.viewed_ids, toWatchIds: user.to_watch_ids})
+			} else {
+				films = parseFilmsArray(data.films as IKPFilm[], { viewedFilms: [], toWatchIds: [] })
+			}
+		} else {
+			films = parseFilmsArray(data.films as IKPFilm[], { viewedFilms: [], toWatchIds: [] }) as IKPFilmMinimize[]
+		}
+		
+		return res.json({
+			pagesCount: data.pagesCount,
+			films
+		} as IKPFilmsResponseData)
+	} catch (error) {
+		log.error(error)
+		return res.status(500)
 	}
 })
 

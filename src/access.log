@@ -1,3 +1,1 @@
-[0mPOST /login [32m200 [0m330.396 ms - 456[0m
-[0mPUT /token [33m404 [0m2.456 ms - 144[0m
-[0mPOST /token [32m200 [0m84.091 ms - 328[0m
+[0mGET /films/search-by-filters [32m200 [0m186.834 ms - 4257[0m
