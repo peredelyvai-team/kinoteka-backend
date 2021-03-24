@@ -52,13 +52,13 @@ authRouter.post(PATH.token, async (req: Request, res: Response) => {
       return res.status(403)
     }
 
-    jwt.verify(token, process.env.REFRESH_TOKEN_SECRET, async (err: any, { login }: any) => {
+    jwt.verify(token, process.env.REFRESH_TOKEN_SECRET, async (err: any, { login, user_id }: any) => {
       if (err) {
         errorHandler(err, res, 403)
       }
 
-      const accessToken = jwt.sign({ login }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '20m' })
-      const refreshToken = jwt.sign({ login }, process.env.REFRESH_TOKEN_SECRET)
+      const accessToken = jwt.sign({ login, user_id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '20m' })
+      const refreshToken = jwt.sign({ login, user_id }, process.env.REFRESH_TOKEN_SECRET)
 
       await TokenModel.findOneAndDelete({ token })
 
