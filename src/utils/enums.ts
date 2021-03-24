@@ -39,6 +39,11 @@ export enum KP_STAFF_KEY {
 	PRODUCER = 'PRODUCER'
 }
 
+export enum KP_VIDEO_SITE {
+	KINOPOISK_WIDGET = 'KINOPOISK_WIDGET',
+	YOUTUBE = 'YOUTUBE'
+}
+
 export enum KP_CATEGORY_TYPE {
 	top = 'top'
 }

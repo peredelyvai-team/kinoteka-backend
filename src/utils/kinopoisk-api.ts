@@ -1,22 +1,7 @@
 import {IFilmsParameters} from "interfaces/IFilmsParameters";
-import {
-	HTTP_METHOD,
-	KP_CATEGORY_TYPE,
-	KP_SERVICE,
-	KP_STAFF_KEY,
-	KP_TYPE_OF_TOP,
-	TMDB_FILM_TYPE,
-	TMDB_SERVICE
-} from "utils/enums";
+import {HTTP_METHOD, KP_CATEGORY_TYPE, KP_SERVICE, KP_STAFF_KEY, KP_TYPE_OF_TOP, KP_VIDEO_SITE} from "utils/enums";
 import axios from "axios";
-import {
-	IKPFilm,
-	IKPFilmsResponseData,
-	IKPSearchResult,
-	IKPStaff,
-	IKPStaffFullData,
-	IKPVideos
-} from "interfaces/IKinopoisk";
+import {IKPFilmsResponseData, IKPSearchResult, IKPStaff, IKPStaffFullData} from "interfaces/IKinopoisk";
 import {log} from "utils/logger";
 
 
@@ -96,7 +81,7 @@ export function getFilmTrailer (id: number) {
 			if (response) {
 				const videos = response.data
 				if (Array.isArray(videos.trailers)) {
-					const trailerPath = videos.trailers[0].url
+					const trailerPath = videos.trailers.find((video: { site: KP_VIDEO_SITE }) => video.site === KP_VIDEO_SITE.KINOPOISK_WIDGET).url
 					resolve(trailerPath)
 				} else {
 					resolve('')
