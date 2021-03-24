@@ -15,6 +15,9 @@ const path = require("path")
 const logger = require('morgan')
 const app = express()
 
+const cors = require('cors')
+app.use(cors())
+
 log.debug(MESSAGES.CURRENT_NODE_ENV + process.env.NODE_ENV)
 process.env.NODE_ENV = process.env.NODE_ENV === ENV.production ? ENV.production : ENV.test
 // process.env.DEBUG = "*"
