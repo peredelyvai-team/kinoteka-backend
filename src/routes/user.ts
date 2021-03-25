@@ -84,27 +84,23 @@ export async function getFilmsFromIds (ids: number[], user: IUser): Promise<IKPF
 			let minimizedFilms: IKPFilmMinimize[] = []
 			
 			await asyncForEach (ids, async (id) => {
-				const response = await getFilmById(id) as any
+				const film = await getFilmById(id) as any
+				log.debug(film)
 				
-				if (response) {
-					const film: IKPFilm = response.data
-					if (film) {
-						log.debug(MESSAGES.FILM + film)
-						minimizedFilms.push({
-							id,
-							poster_small: film.posterUrlPreview,
-							year: film.year,
-							duration: film.filmLength,
-							rating: film.rating,
-							title: film.nameRu,
-							viewed: user.viewed_ids?.includes(id) || false,
-							to_watched: user.to_watch_ids?.includes(id) || false
-						})
-					} else {
-						log.error(MESSAGES.ERROR_FILM_PARSE)
-					}
+				if (film) {
+					log.debug(MESSAGES.FILM + film)
+					minimizedFilms.push({
+						id,
+						poster_small: film.posterUrlPreview,
+						year: film.year,
+						duration: film.filmLength,
+						rating: film.rating,
+						title: film.nameRu,
+						viewed: user.viewed_ids?.includes(id) || false,
+						to_watched: user.to_watch_ids?.includes(id) || false
+					})
 				} else {
-					log.error(MESSAGES.ERROR_UNDEFINED_FILM + id)
+					log.error(MESSAGES.ERROR_FILM_PARSE)
 				}
 			})
 			log.debug(MESSAGES.FILMS + minimizedFilms)
