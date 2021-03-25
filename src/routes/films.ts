@@ -18,7 +18,7 @@ import {userRouter} from "~/routes/user";
 const filmsRouter = express.Router()
 
 
-function parseFilmsArray (films: IKPFilm[], userFilms: IUserFilms ): Array<IKPFilmMinimize> {
+export function parseFilmsArray (films: IKPFilm[], userFilms: IUserFilms ): Array<IKPFilmMinimize> {
 	return films.map(el => {
 		return {
 			id: el.filmId,
@@ -250,49 +250,5 @@ filmsRouter.post(PATH.films.search, async (req: Request, res: Response) => {
 		return res.status(400).send(MESSAGES.ERROR_FIND_FILMS)
 	}
 })
-
-userRouter.get(PATH.films.filters, async (req: Request, res: Response) => {
-	try {
-		const data = await getFilters()
-		return res.json(data)
-	} catch (error) {
-		log.error(error)
-		return res.status(500).send(MESSAGES.ERROR_GET_FILTERS)
-	}
-})
-
-userRouter.get(PATH.films.searchByFilters, async (req: Request, res: Response) => {
-	try {
-		const query: string = req.originalUrl.slice(req.originalUrl.indexOf('?') + 1)
-		log.debug(query)
-		
-		const data = await searchByFilters(query) as IKPFilmsResponseData
-		
-		const isAuthorized: boolean = checkToken(req) || false
-		log.debug(MESSAGES.USER_AUTHORIZED + isAuthorized)
-		let films: IKPFilmMinimize[]
-		if (isAuthorized) {
-			
-			const user = await getCurrentUser(req) as IUser
-			
-			if (user) {
-				films = parseFilmsArray(data.films as IKPFilm[], { viewedFilms: user.viewed_ids, toWatchIds: user.to_watch_ids})
-			} else {
-				films = parseFilmsArray(data.films as IKPFilm[], { viewedFilms: [], toWatchIds: [] })
-			}
-		} else {
-			films = parseFilmsArray(data.films as IKPFilm[], { viewedFilms: [], toWatchIds: [] }) as IKPFilmMinimize[]
-		}
-		
-		return res.json({
-			pagesCount: data.pagesCount,
-			films
-		} as IKPFilmsResponseData)
-	} catch (error) {
-		log.error(error)
-		return res.status(500)
-	}
-})
-
 
 export { filmsRouter }

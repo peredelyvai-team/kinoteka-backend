@@ -37,5 +37,7 @@ export const MESSAGES = {
 	ERROR_USER_NOT_FOUND: 'User not found',
 	ERROR_FIND_FILMS: 'Unable to find films by keyword',
 	ERROR_KEYWORD: 'Wrong format of keyword. Must be a string with 3 or more characters',
-	ERROR_GET_FILTERS: 'Unable to get filters'
+	ERROR_GET_FILTERS: 'Unable to get filters',
+	ERROR_RECOMMENDATIONS_GET: 'Unable to create recommendations',
+	ERROR_LITTLE_FILMS_COUNT: 'Too low count of viewed and films to watch'
 }

@@ -8,7 +8,8 @@ export const PATH = {
 	users: {
 		films: {
 			viewed: '/users/:id/films/viewed',
-			to_watch: '/users/:id/films/to_watch'
+			to_watch: '/users/:id/films/to_watch',
+			recommended: '/users/:id/recommended',
 		}
 	},
 	
@@ -16,7 +17,6 @@ export const PATH = {
   	get: '/films',
     popular: '/films/popular',
     latest: '/films/latest',
-    recommended: '/films/recommended',
 	  selected: '/films/:id',
 	  search: '/films/search',
 	  searchByFilters: '/films/search-by-filters',

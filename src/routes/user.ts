@@ -5,11 +5,12 @@ import {UserModel} from "db.users/users.model"
 import {IUser, IUserCondition} from "db.users/users.types"
 import {MESSAGES} from "utils/messages";
 import {authenticationCheck} from "~/middlewares/jwtAuth";
-import {asyncForEach, errorHandler, getCurrentUser} from "utils/helpers";
+import {asyncForEach, checkToken, errorHandler, getCurrentUser} from "utils/helpers";
 import {IUserFilmsChanges} from "interfaces/IUserModel";
 import {log} from "utils/logger";
-import {IKPFilm, IKPFilmMinimize} from "interfaces/IKinopoisk";
-import {getFilmById} from "utils/kinopoisk-api";
+import {IKPFilm, IKPFilmMinimize, IKPFilmsResponseData} from "interfaces/IKinopoisk";
+import {getFilmById, getFilters, getRecommendedUserFilms, searchByFilters} from "utils/kinopoisk-api";
+import {parseFilmsArray} from "~/routes/films";
 const bcrypt = require('bcrypt')
 const userRouter = express.Router()
 
@@ -76,6 +77,30 @@ export async function findUserByCondition (condition: IUserCondition): Promise<I
 	})
 }
 
+
+export async function getFullFilmsDataFromIds (ids: number[]): Promise<IKPFilm[]> {
+	return new Promise(async (resolve, reject) => {
+		try {
+			let films: IKPFilm[] = []
+			
+			await asyncForEach (ids, async (id) => {
+				const film = await getFilmById(id) as IKPFilm
+				log.debug(film)
+				
+				if (film) {
+					log.debug(MESSAGES.FILM + film)
+					films.push(film)
+				} else {
+					log.error(MESSAGES.ERROR_FILM_PARSE)
+				}
+			})
+			log.debug(MESSAGES.FILMS + films)
+			resolve(films)
+		} catch (error) {
+			reject(error)
+		}
+	})
+}
 
 // Получение данных о фильмах через их идентификаторы
 export async function getFilmsFromIds (ids: number[], user: IUser): Promise<IKPFilmMinimize[]> {
@@ -275,6 +300,50 @@ userRouter.put(PATH.users.films.to_watch, authenticationCheck, async (req: Reque
 })
 
 
+userRouter.get(PATH.films.filters, async (req: Request, res: Response) => {
+	try {
+		const data = await getFilters()
+		return res.json(data)
+	} catch (error) {
+		log.error(error)
+		return res.status(500).send(MESSAGES.ERROR_GET_FILTERS)
+	}
+})
+
+userRouter.get(PATH.films.searchByFilters, async (req: Request, res: Response) => {
+	try {
+		const query: string = req.originalUrl.slice(req.originalUrl.indexOf('?') + 1)
+		log.debug(query)
+		
+		const data = await searchByFilters(query) as IKPFilmsResponseData
+		
+		const isAuthorized: boolean = checkToken(req) || false
+		log.debug(MESSAGES.USER_AUTHORIZED + isAuthorized)
+		let films: IKPFilmMinimize[]
+		if (isAuthorized) {
+			
+			const user = await getCurrentUser(req) as IUser
+			
+			if (user) {
+				films = parseFilmsArray(data.films as IKPFilm[], { viewedFilms: user.viewed_ids, toWatchIds: user.to_watch_ids})
+			} else {
+				films = parseFilmsArray(data.films as IKPFilm[], { viewedFilms: [], toWatchIds: [] })
+			}
+		} else {
+			films = parseFilmsArray(data.films as IKPFilm[], { viewedFilms: [], toWatchIds: [] }) as IKPFilmMinimize[]
+		}
+		
+		return res.json({
+			pagesCount: data.pagesCount,
+			films
+		} as IKPFilmsResponseData)
+	} catch (error) {
+		log.error(error)
+		return res.status(500)
+	}
+})
+
+
 // Получение списка просмотренных фильмов
 userRouter.get(PATH.users.films.to_watch, async (req: Request, res: Response) => {
 	try {
@@ -293,10 +362,10 @@ userRouter.get(PATH.users.films.to_watch, async (req: Request, res: Response) =>
 				const to_watch_ids: number[] = user.to_watch_ids || []
 				log.debug(MESSAGES.FILM_IDS + to_watch_ids)
 				
-				const toWatchIds = await getFilmsFromIds(to_watch_ids, user)
+				const toWatchFilms = await getFilmsFromIds(to_watch_ids, user)
 				
-				if (Array.isArray(toWatchIds)) {
-					return res.status(200).json(toWatchIds)
+				if (Array.isArray(toWatchFilms)) {
+					return res.status(200).json(toWatchFilms)
 				} else {
 					log.error(MESSAGES.ERROR_GET_VIEWED_FILMS)
 					return res.status(500).send(MESSAGES.ERROR_GET_VIEWED_FILMS)
@@ -318,5 +387,27 @@ userRouter.get(PATH.users.films.to_watch, async (req: Request, res: Response) =>
 		errorHandler(error, res)
 	}
 })
+
+userRouter.get(PATH.users.films.recommended, authenticationCheck, async (req: Request, res: Response) => {
+	try {
+		const user = await getCurrentUser(req) as IUser
+		log.debug(user)
+		if (user) {
+			const recommendedFilms = await getRecommendedUserFilms(req)
+			const filmsMinimized: IKPFilmMinimize[] = parseFilmsArray(recommendedFilms, { viewedFilms: user.viewed_ids, toWatchIds: user.to_watch_ids })
+			return res.json({
+				recommendedFilms: filmsMinimized
+			})
+		} else {
+			log.error(MESSAGES.ERROR_USER_NOT_FOUND)
+			return res.status(403).send(MESSAGES.ERROR_USER_NOT_FOUND)
+		}
+	} catch (error) {
+		log.error(error)
+		return res.status(500).send(error)
+	}
+})
+
+
 
 export { userRouter }
