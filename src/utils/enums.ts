@@ -35,8 +35,7 @@ export enum KP_SERVICE {
 
 export enum KP_STAFF_KEY {
 	DIRECTOR = 'DIRECTOR',
-	WRITER = 'WRITER',
-	PRODUCER = 'PRODUCER'
+	ACTOR = 'ACTOR'
 }
 
 export enum KP_VIDEO_SITE {

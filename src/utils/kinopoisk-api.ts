@@ -160,14 +160,20 @@ export function getFilmStaff (id: number): Promise<IKPStaff[]> {
 			const types = Object.values(KP_STAFF_KEY)
 			const staff: IKPStaff[] = []
 			
+			let actorsCount = 0
+			let actorsLimit = 10
 			totalStaff.forEach(el => {
-				if (types.includes(el.professionKey as KP_STAFF_KEY)) {
+				if (el.professionKey === KP_STAFF_KEY.DIRECTOR || el.professionKey === KP_STAFF_KEY.ACTOR) {
 					staff.push({
 						name: el.nameRu,
 						description: el.description,
 						posterUrl: el.posterUrl,
 						profession: el.professionText
 					} as IKPStaff)
+					
+					if (actorsCount <= actorsLimit && el.professionKey === KP_STAFF_KEY.ACTOR) {
+						actorsCount++
+					}
 				}
 			})
 			resolve(staff)
